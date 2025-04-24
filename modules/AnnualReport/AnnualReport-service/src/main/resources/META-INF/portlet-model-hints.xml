@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.rinfra.annual.model.AnnualReport">
+		<field name="SRNO" type="long" />
+		<field name="FINANCIAL_YEARS" type="String" />
+		<field name="FINANCIALDATA" type="String" />
+		<field name="FINANCIAL_DATALINK" type="String" />
+	</model>
+</model-hints>

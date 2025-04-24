@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+   <sql id="UnpaidUnclaimedDevidendSQLQuery"> 
+      <![CDATA[ 
+           SELECT * FROM UNPAID_DIVIDEND_FY_2018  WHERE FOLIO_NO_OF_ITIES=?]]>
+   </sql>
+</custom-sql>

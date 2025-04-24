@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.media.query">
+	<namespace>MediaQuery</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="MediaQuery" remote-service="true" uuid="false" table="MEDIA_QUERY" data-source="extDataSource">
+
+		<!-- PK fields -->
+
+		<column name="srNo" db-name="SR_NO" primary="true" type="long" />
+		
+		<column name="journalistName" db-name="JOURNALIST_NAME" type="String" />
+		<column name="newsOrganisationName" db-name="ORGANISATION_NAME" type="String" />
+		<column name="organisationType" db-name="ORGANISATION_TYPE" type="String" />
+		<column name="mobile" db-name="MOBILE" type="String" />
+		<column name="email" db-name="EMAIL" type="String" />
+		<column name="subject" db-name="SUBJECT" type="String" />
+		<column name="mediaQuery" db-name="MEDIAQUERY" type="String" />
+		
+	</entity>
+	
+</service-builder>

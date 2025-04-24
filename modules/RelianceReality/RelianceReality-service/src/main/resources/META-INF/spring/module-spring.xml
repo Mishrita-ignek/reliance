@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.reliance.reality.service.impl.RealityPropertyMasterLocalServiceImpl" id="com.reliance.reality.service.RealityPropertyMasterLocalService" />
+	<bean class="com.reliance.reality.service.impl.RealityPropertyMasterServiceImpl" id="com.reliance.reality.service.RealityPropertyMasterService" />
+	<bean class="com.reliance.reality.service.persistence.impl.RealityPropertyMasterPersistenceImpl" id="com.reliance.reality.service.persistence.RealityPropertyMasterPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.reliance.reality.service.persistence.impl.RealityPropertyMasterFinderImpl" id="com.reliance.reality.service.persistence.RealityPropertyMasterFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.reliance.reality.service.impl.RelianceRealityLocalServiceImpl" id="com.reliance.reality.service.RelianceRealityLocalService" />
+	<bean class="com.reliance.reality.service.impl.RelianceRealityServiceImpl" id="com.reliance.reality.service.RelianceRealityService" />
+	<bean class="com.reliance.reality.service.persistence.impl.RelianceRealityPersistenceImpl" id="com.reliance.reality.service.persistence.RelianceRealityPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.reliance.reality.service.persistence.impl.RelianceRealityFinderImpl" id="com.reliance.reality.service.persistence.RelianceRealityFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

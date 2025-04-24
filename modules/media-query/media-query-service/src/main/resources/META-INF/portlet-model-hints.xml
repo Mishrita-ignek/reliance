@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.media.query.model.MediaQuery">
+		<field name="srNo" type="long" />
+		<field name="journalistName" type="String" />
+		<field name="newsOrganisationName" type="String" />
+		<field name="organisationType" type="String" />
+		<field name="mobile" type="String" />
+		<field name="email" type="String" />
+		<field name="subject" type="String" />
+		<field name="mediaQuery" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.news.media.service.impl.NewsAndMediaLocalServiceImpl" id="com.news.media.service.NewsAndMediaLocalService" />
+	<bean class="com.news.media.service.impl.NewsAndMediaServiceImpl" id="com.news.media.service.NewsAndMediaService" />
+	<bean class="com.news.media.service.persistence.impl.NewsAndMediaPersistenceImpl" id="com.news.media.service.persistence.NewsAndMediaPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.news.media.service.persistence.impl.NewsAndMediaFinderImpl" id="com.news.media.service.persistence.NewsAndMediaFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

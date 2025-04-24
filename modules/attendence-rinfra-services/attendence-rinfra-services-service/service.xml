@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="attendence.rinfra.services">
+	<namespace>AttendenceRinfra</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="EmpMaster" table="MASTER_TABLE" remote-service="false" data-source="rinfrauser" >
+
+		<column name="employeeCode" db-name="EMPLOYEE_CODE" primary="true" type="String" />
+		<column name="employeeName" db-name="EMPLOYEE_NAME" type="String" />
+		<column name="mobile" db-name="MOBILE_NUMBER" type="String" />
+		<column name="userDefined1" db-name="USER_DEFINED_1" type="String" />
+		<column name="userDefined2" db-name="USER_DEFINED_2" type="String" />
+		
+	</entity>
+	
+	<entity local-service="true" name="EmpOtpMaster" table="EMP_OTP_MASTER" remote-service="false" data-source="rinfrauser" >
+
+		<column name="empMobile" db-name="EMP_MOBILE" primary="true" type="String" />
+		<column name="otp" db-name="OTP" type="String" />
+		
+	</entity>
+	
+	<entity local-service="true" name="AttendenceTransaction" table="ATTENDENCE_TRANSACTION_TABLE" remote-service="false" data-source="rinfrauser" >
+
+		<column name="srNo" db-name="SRNO" primary="true" type="String" />
+		<column name="employeeCode" db-name="EMPLOYEE_CODE" type="String" />
+		<column name="employeeName" db-name="EMPLOYEE_NAME" type="String" />
+		<column name="mobile" db-name="MOBILE_NUMBER" type="String" />
+		<column name="userDefined1" db-name="USER_DEFINED_1" type="String" />
+		<column name="userDefined2" db-name="USER_DEFINED_2" type="String" />
+		<column name="attendenceMode" db-name="ATTENDENCE_MODE" type="String" />
+		<column name="attendenceDateTime" db-name="ATTENDENCE_DATETIME" type="String" />
+		
+		<finder return-type="AttendenceTransaction" name="employeeCode">
+			<finder-column name="employeeCode"></finder-column>
+		</finder>	
+		
+	</entity>
+</service-builder>

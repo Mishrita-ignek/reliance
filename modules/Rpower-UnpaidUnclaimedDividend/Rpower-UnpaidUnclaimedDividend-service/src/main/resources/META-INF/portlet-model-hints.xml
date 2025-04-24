@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.rpower.unpaid.unclaimed.dividend.model.RpowerUnpaidUnclaimedDevidend">
+		<field name="SRNO" type="long" />
+		<field name="FIRST_NAME" type="String" />
+		<field name="MIDDLE_NAME" type="String" />
+		<field name="LAST_NAME" type="String" />
+		<field name="FATHER_HUSBAND_FIRST_NAME" type="String" />
+		<field name="FATHER_HUSBAND_MIDDLE_NAME" type="String" />
+		<field name="FATHER_HUSBAND_LAST_NAME" type="String" />
+		<field name="ADDRESS" type="String" />
+		<field name="COUNTRY" type="String" />
+		<field name="STATE" type="String" />
+		<field name="DISTRICT" type="String" />
+		<field name="PIN_CODE" type="long" />
+		<field name="FOLIO_NO_OF_ITIES" type="String" />
+		<field name="INVESTMENT_TYPE" type="String" />
+		<field name="AMOUNT_DUE_IN_RS" type="double" />
+		<field name="PROPOSED_DATE_TRANSFER_IPEF" type="Date" />
+		<field name="CREATEDATE" type="Date" />
+	</model>
+</model-hints>

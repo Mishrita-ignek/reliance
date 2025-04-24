@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.newrpower.share.doc">
+	<namespace>RpowerShareHoldersDoc</namespace>
+	<entity local-service="true" name="RpowerShareHolders" cache-enabled="false" table="RPOWER_SHARE_HOLDERS" data-source="extDataSource">
+		<column name="SRNO" type="long" ></column>
+		<column name="FOLIO_NO" type="String" primary="true"></column>
+		<column name="SHARES" type="String"></column>
+	</entity>
+	 <entity name="RpowerShareHoldersDoc" local-service="true" cache-enabled="false" table="RPOWER_SHARE_HOLDERS_DOC" data-source="extDataSource">
+        <column name="pressId" type="long" primary="true"></column>
+        <column name="heading" type="String"></column>
+        <column name="description" type="String"></column>
+        <column name="fileURL" type="String"></column>
+    </entity>
+    
+    <entity local-service="true" name="ShareHolders" uuid="false" table="SHARE_HOLDERS" data-source="extDataSource">
+		<column name="SRNO" type="long" ></column>
+		<column name="FOLIO_NO" type="String" primary="true"></column>
+		<column name="SHARES" type="String"></column>
+	</entity>
+	 <entity name="ShareHoldersDoc" local-service="true" uuid="false" table="SHARE_HOLDERS_DOC" data-source="extDataSource">
+        <column name="pressId" type="long" primary="true"></column>
+        <column name="heading" type="String"></column>
+        <column name="description" type="String"></column>
+        <column name="fileURL" type="String"></column>
+    </entity>
+</service-builder>

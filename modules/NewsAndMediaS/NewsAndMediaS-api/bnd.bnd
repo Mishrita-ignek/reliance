@@ -1,0 +1,9 @@
+Bundle-Name: NewsAndMediaS-api
+Bundle-SymbolicName: com.news.media.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.news.media.exception,\
+	com.news.media.model,\
+	com.news.media.service,\
+	com.news.media.service.persistence
+-includeresource: META-INF/service.xml=../NewsAndMediaS-service/service.xml

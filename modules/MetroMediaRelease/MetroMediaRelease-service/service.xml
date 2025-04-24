@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.metro.mediarelease">
+	<namespace>MumbaiMediaRelease</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="mediarelease" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="MetroMediaRelease" remote-service="true" uuid="false" table="mumbai_metro_media_release" data-source="extDataSource">
+
+		<!-- PK fields -->
+		<column name="SRNO" primary="true" type="long" />
+		<column name="HDATE" type="Date" />
+		<column name="HEADLINE" type="String" />
+		<column name="DOCUMENT_NAME" type="String" />
+		<column name="CREATEDATE" type="Date" />
+
+	</entity>
+</service-builder>

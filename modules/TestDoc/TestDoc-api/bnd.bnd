@@ -1,0 +1,9 @@
+Bundle-Name: TestDoc-api
+Bundle-SymbolicName: TestDoc.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	TestDoc.exception,\
+	TestDoc.model,\
+	TestDoc.service,\
+	TestDoc.service.persistence
+-includeresource: META-INF/service.xml=../TestDoc-service/service.xml

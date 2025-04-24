@@ -1,0 +1,9 @@
+Bundle-Name: OCCModuleNew-api
+Bundle-SymbolicName: OCCModuleNew.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	OCCModuleNew.exception,\
+	OCCModuleNew.model,\
+	OCCModuleNew.service,\
+	OCCModuleNew.service.persistence
+-includeresource: META-INF/service.xml=../OCCModuleNew-service/service.xml

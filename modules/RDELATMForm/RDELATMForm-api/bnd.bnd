@@ -1,0 +1,9 @@
+Bundle-Name: RDELATMForm-api
+Bundle-SymbolicName: com.redlatm.form.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.redlatm.form.exception,\
+	com.redlatm.form.model,\
+	com.redlatm.form.service,\
+	com.redlatm.form.service.persistence
+-includeresource: META-INF/service.xml=../RDELATMForm-service/service.xml

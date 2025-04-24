@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.rinfra.unpaid.unclaimed.devidend.model.RpowerUnpaidUnclaimedDevidend" />
+	<import class="com.rinfra.unpaid.unclaimed.devidend.model.UnpaidUnclaimedDevidend" />
+	<class name="com.rinfra.unpaid.unclaimed.devidend.model.impl.RpowerUnpaidUnclaimedDevidendImpl" table="RPOWER_UNPAIDUNCLAIMEDDIVIDEND">
+		<id name="SRNO" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="FIRST_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="MIDDLE_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="LAST_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="FATHER_HUSBAND_FIRST_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="FATHER_HUSBAND_MIDDLE_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="FATHER_HUSBAND_LAST_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ADDRESS" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="COUNTRY" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="STATE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="DISTRICT" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="PIN_CODE" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="FOLIO_NO_OF_ITIES" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="INVESTMENT_TYPE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="AMOUNT_DUE_IN_RS" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="PROPOSED_DATE_TRANSFER_IPEF" type="org.hibernate.type.TimestampType" />
+		<property name="CREATEDATE" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.rinfra.unpaid.unclaimed.devidend.model.impl.UnpaidUnclaimedDevidendImpl" table="UNPAID_DIVIDEND_FY_2018">
+		<id name="SRNO" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="FIRST_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="MIDDLE_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="LAST_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="FATHER_HUSBAND_FIRST_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="FATHER_HUSBAND_MIDDLE_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="FATHER_HUSBAND_LAST_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ADDRESS" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="COUNTRY" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="STATE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="DISTRICT" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="PIN_CODE" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="FOLIO_NO_OF_ITIES" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="INVESTMENT_TYPE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="AMOUNT_DUE_IN_RS" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="PROPOSED_DATE_TRANSFER_IPEF" type="org.hibernate.type.TimestampType" />
+		<property name="CREATEDATE" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

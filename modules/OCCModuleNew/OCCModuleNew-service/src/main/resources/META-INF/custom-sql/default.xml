@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+   <sql id="getList"> 
+      <![CDATA[ 
+      SELECT * from OCC_NEW where LISTNAME=?]]>     
+   </sql>  
+   <sql id="getMsgList"> 
+      <![CDATA[ 
+      SELECT * FROM OCC_MESSAGE_NEW WHERE LISTNAME=? ORDER BY CREATEDATE ASC]]>     
+   </sql> 
+   
+   <sql id="getMsg"> 
+      <![CDATA[ 
+      SELECT * FROM OCC_MESSAGE_NEW]]>     
+   </sql> 
+   
+</custom-sql>
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="rinfra.share.holders.doc.model.ShareHolders">
+		<field name="SRNO" type="long" />
+		<field name="FOLIO_NO" type="String" />
+		<field name="SHARES" type="String" />
+	</model>
+	<model name="rinfra.share.holders.doc.model.ShareHoldersDoc">
+		<field name="pressId" type="long" />
+		<field name="heading" type="String" />
+		<field name="description" type="String" />
+		<field name="fileURL" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.rinfra.news">
+	<author>Vipin Singh</author>
+	<namespace>RINFRA_NEWS</namespace>
+    <entity name="PressNews" local-service="true" table="Rinfra_news" data-source="extDataSource" cache-enabled="false">
+        <column name="newsId" type="long" primary="true"></column>
+        <column name="headLine" type="String"></column>
+        <column name="publication" type="String"></column>
+        <column name="downloadUrl" type="String"></column>
+        <column name="fileName" type="String"></column>
+        <column name="date" type="Date"></column>
+		<column name="year" type="int"></column>
+		<column name="month" type="int"></column>
+		<column name="show" type="String"></column>
+		<order by="desc">
+		<order-column name="date" order-by="desc"/>
+		</order>
+        <finder name="NewsYearAndMonth" return-type="Collection">
+            <finder-column name="year"></finder-column>
+            <finder-column name="month"></finder-column>
+        </finder>
+		
+		 <finder name="NewsYear" return-type="Collection">
+            <finder-column name="year"></finder-column>
+        </finder>
+		
+    </entity>
+</service-builder>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.rinfra.satisfactionsurvey.model.Shareholders" />
+	<class name="com.rinfra.satisfactionsurvey.model.impl.ShareholdersImpl" table="SHAREHOLDERS">
+		<id name="SOLE_ID" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="SHAREHOLDERSID" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="SOLE_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ID_NUMBER" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="MOBILE" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="TELEPHONE" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="EMAIL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="QUERY_RESPONSE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="OVERALL_RATING" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="COMP_INFORMATION" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="QUALITY_REPORT" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="DESCRIPTION" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="COMMENTS" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="GRIEVANCE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

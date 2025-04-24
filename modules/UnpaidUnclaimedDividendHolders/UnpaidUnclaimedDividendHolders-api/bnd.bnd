@@ -1,0 +1,9 @@
+Bundle-Name: UnpaidUnclaimedDividendHolders-api
+Bundle-SymbolicName: com.unpaid.unclaimed.dividend.holders.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.unpaid.unclaimed.dividend.holders.exception,\
+	com.unpaid.unclaimed.dividend.holders.model,\
+	com.unpaid.unclaimed.dividend.holders.service,\
+	com.unpaid.unclaimed.dividend.holders.service.persistence
+-includeresource: META-INF/service.xml=../UnpaidUnclaimedDividendHolders-service/service.xml

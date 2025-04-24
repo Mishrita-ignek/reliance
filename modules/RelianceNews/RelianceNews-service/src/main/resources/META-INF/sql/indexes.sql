@@ -1,0 +1,1 @@
+create index IX_4ABFD8E5 on Rinfra_news (year, month);

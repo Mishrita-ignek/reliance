@@ -1,0 +1,12 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+
+
+@import url(custom/menu-style.css);
+@import url(custom/responsiveslides.css);
+@import url(custom/skeleton.css);
+@import url(custom/source/jquery.fancybox.css);
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */

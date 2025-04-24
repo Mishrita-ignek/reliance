@@ -1,0 +1,9 @@
+Bundle-Name: newrpower-shareholders-doc-api
+Bundle-SymbolicName: com.newrpower.share.doc.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.newrpower.share.doc.exception,\
+	com.newrpower.share.doc.model,\
+	com.newrpower.share.doc.service,\
+	com.newrpower.share.doc.service.persistence
+-includeresource: META-INF/service.xml=../newrpower-shareholders-doc-service/service.xml

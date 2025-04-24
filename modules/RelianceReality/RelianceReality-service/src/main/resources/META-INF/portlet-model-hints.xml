@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.reliance.reality.model.RealityPropertyMaster">
+		<field name="property_ID" type="long" />
+		<field name="city" type="String" />
+		<field name="location" type="String" />
+		<field name="address" type="String" />
+		<field name="area" type="String" />
+		<field name="type" type="String" />
+		<field name="guidancePrice" type="String" />
+		<field name="propertyBid" type="long" />
+		<field name="offerPrice" type="String" />
+		<field name="ageOfProperty" type="String" />
+		<field name="createDate" type="Date" />
+	</model>
+	<model name="com.reliance.reality.model.RelianceReality">
+		<field name="r_Id" type="long" />
+		<field name="city" type="String" />
+		<field name="location" type="String" />
+		<field name="address" type="String" />
+		<field name="area" type="String" />
+		<field name="type" type="String" />
+		<field name="guidancePrice" type="long" />
+		<field name="propertyId" type="String" />
+		<field name="offerPrice" type="String" />
+		<field name="funding" type="String" />
+		<field name="days" type="long" />
+		<field name="empcode" type="String" />
+		<field name="name" type="String" />
+		<field name="email_id" type="String" />
+		<field name="mobile" type="String" />
+		<field name="ageOfProperty" type="String" />
+		<field name="groupCompanyName" type="String" />
+		<field name="createDate" type="Date" />
+	</model>
+</model-hints>

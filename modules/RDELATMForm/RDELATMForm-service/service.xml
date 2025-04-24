@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.redlatm.form">
+	<author>Mukesh,Vipin</author>
+	<namespace>CandidateDefenceForm</namespace>
+	<entity local-service="true" name="CandidateForm" remote-service="true" uuid="false" table="CANDIDATE_APPLICATION" data-source="extDataSource" >  
+	<!-- PK fields -->
+		<column name="CaId" db-name="CA_ID" primary="true" type="long" />
+	<!--  step 1	 -->
+		<column name="firstName"  type="String" />
+		<column name="surname"  type="String" />
+		<column name="password"  type="String" />
+		<column name="father_SpouseName"  type="String" />
+		<column name="aadharCardNo"  type="String" />
+		<column name="panCardNo"  type="String" />
+		<column name="bankAccountNo"  type="String" />
+		<column name="employmentExRegnNo"  type="String" />
+		<column name="dateOfBirth"  type="String" />
+		<column name="nativeLocation"  type="String" />
+		<column name="motherTongue"  type="String" />
+		<column name="identificationMark"  type="String" />
+		<column name="domicile"  type="String" />
+		<column name="languagesKnown"  type="String" />
+		<column name="relCompany"  type="String" />
+		<column name="relLocation"  type="String" />
+		<column name="relRole"  type="String" />
+		<column name="relFromDate"  type="String" />
+		<column name="relToDate"  type="String" />
+		<column name="relLeavingReason"  type="String" />
+		<column name="handicapDetail"  type="String" />
+		<column name="religion"  type="String" />
+		<column name="caste"  type="String" />
+		<column name="subCaste"  type="String" />
+		<column name="maritalStatus"  type="String" />
+		<column name="ableToJoin"  type="String" />
+		
+		<!--added  -->
+		<column name="ableToDays"  type="String" />
+		<column name="ableToMonth"  type="String" />
+	<!-- // step 2	 -->	
+		<column name="address"  type="String" />
+		<column name="city"  type="String" />
+		<column name="state"  type="String" />
+		<column name="pin"  type="String" />
+		<column name="emailAddress"  type="String" />
+		<column name="alternateEmailID"  type="String" />
+		<column name="mobile"  type="String" />
+		<column name="alternateMobile"  type="String" />
+		<column name="personAlternateNoGiven"  type="String" />
+	<!-- //step 3 -->		
+		<column name="mainQualification"  type="String" />
+		<column name="specialization"  type="String" />
+		<column name="trade"  type="String" />
+		<column name="totalYrExperience"  type="String" />
+		<column name="skill_Proficiency"  type="String" />
+		
+		<!--added  -->
+		<column name="SECURITYCLEARFROM"  type="String" />
+		<column name="SECURITYCLEARTILL"  type="String" />
+		<column name="MEDICALFITDOCNAME"  type="String" />
+		<column name="MEDICALFITDOCADDR"  type="String" />
+		<column name="MEDICALFITDOCREGNNO"  type="String" />
+		<column name="MEDICALFITDOCTILL"  type="String" />
+		
+	<!-- //step 4 -->	
+		<column name="currentCompanyName"  type="String" />
+		<column name="currentCompanyAddress"  type="String" />
+		<column name="workingSinceDate"  type="String" />
+		<column name="designation"  type="String" />
+		<column name="CTCFixed"  type="String" />
+		<column name="CTCVariable"  type="String" />
+		<column name="CTCTotal"  type="String" />
+		<column name="role"  type="String" />
+		<column name="location"  type="String" />
+		<column name="noticePeriod"  type="String" />
+	<!-- //step 5 -->		
+		<column name="firstCompanyName"  type="String" />
+		<column name="firstFromDate"  type="String" />
+		<column name="firstToDate"  type="String" />
+		<column name="firstCLocation"  type="String" />
+		<column name="firstCDesignation"  type="String" />
+		<column name="firstFixedCTC"  type="String" />
+		<column name="firstVariableCTC"  type="String" />
+		<column name="firstTotalCTC"  type="String" />
+		<column name="firstRemarkIfAny"  type="String" />
+		<column name="secoundCompanyName"  type="String" />
+		<column name="secoundFromDate"  type="String" />
+		<column name="secoundToDate"  type="String" />
+		<column name="secoundCLocation"  type="String" />
+		<column name="secoundCDesignation"  type="String" />
+		<column name="secoundFixedCTC"  type="String" />
+		<column name="secoundVariableCTC"  type="String" />
+		<column name="secoundTotalCTC"  type="String" />
+		<column name="secoundRemarkIfAny"  type="String" />
+		<column name="thirdCompanyName"  type="String" />
+		<column name="thirdFromDate"  type="String" />
+		<column name="thirdToDate"  type="String" />
+		<column name="thirdCLocation"  type="String" />
+		<column name="thirdCDesignation"  type="String" />
+		<column name="thirdFixedCTC"  type="String" />
+		<column name="thirdVariableCTC"  type="String" />
+		<column name="thirdTotalCTC"  type="String" />
+		<column name="thirdRemarkIfAny"  type="String" />
+		<column name="forthCompanyName"  type="String" />
+		<column name="forthFromDate"  type="String" />
+		<column name="forthToDate"  type="String" />
+		<column name="forthCLocation"  type="String" />
+		<column name="forthCDesignation"  type="String" />
+		<column name="forthFixedCTC"  type="String" />
+		<column name="forthVariableCTC"  type="String" />
+		<column name="forthTotalCTC"  type="String" />
+		<column name="forthRemarkIfAny"  type="String" />
+		<column name="fifthCompanyName"  type="String" />
+		<column name="fifthFromDate"  type="String" />
+		<column name="fifthToDate"  type="String" />
+		<column name="fifthCLocation"  type="String" />
+		<column name="fifthCDesignation"  type="String" />
+		<column name="fifthFixedCTC"  type="String" />
+		<column name="fifthVariableCTC"  type="String" />
+		<column name="fifthTotalCTC"  type="String" />
+		<column name="fifthRemarkIfAny"  type="String" />
+	<!-- //step 6 -->		
+		<column name="SSCQualification"  type="String" />
+		<column name="SSCUniversityInstitute"  type="String" />
+		<column name="SSCYearOfPassing"  type="String" />
+		<column name="SSCGrade"  type="String" />
+		<column name="HSCUniversityInstitute"  type="String" />
+		<column name="HSCQualification"  type="String" />
+		<column name="HSCYearOfPassing"  type="String" />
+		<column name="HSCGrade"  type="String" />
+		<column name="GradUniversityInstitute"  type="String" />
+		<column name="GradQualification"  type="String" />
+		<column name="GradYearOfPassing"  type="String" />
+		<column name="GradGrade"  type="String" />
+		<column name="PGUniversityInstitute"  type="String" />
+		<column name="PGQualification"  type="String" />
+		<column name="PGYearOfPassing"  type="String" />
+		<column name="PGGrade"  type="String" />
+		<column name="PhDUniversityInstitute"  type="String" />
+		<column name="PhDQualification"  type="String" />
+		<column name="PhDYearOfPassing"  type="String" />
+		<column name="PhDGrade"  type="String" />
+		<column name="other1UniversityInstitute"  type="String" />
+		<column name="other1Qualification"  type="String" />
+		<column name="other1YearOfPassing"  type="String" />
+		<column name="other1Grade"  type="String" />
+		<column name="other2UniversityInstitute"  type="String" />
+		<column name="other2Qualification"  type="String" />
+		<column name="other2YearOfPassing"  type="String" />
+		<column name="other2Grade"  type="String" />
+		<column name="other3UniversityInstitute"  type="String" />
+		<column name="other3Qualification"  type="String" />
+		<column name="other3YearOfPassing"  type="String" />
+		<column name="other3Grade"  type="String" />
+		<column name="UPLOADFILE"  type="String" />
+        <finder name="emailId" return-type="Collection">
+            <finder-column name="emailAddress"></finder-column>
+        </finder>
+	</entity>
+</service-builder>

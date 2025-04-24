@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.rinfra.satisfactionsurvey.model.Shareholders">
+		<field name="SHAREHOLDERSID" type="long" />
+		<field name="SOLE_ID" type="long" />
+		<field name="SOLE_NAME" type="String" />
+		<field name="ID_NUMBER" type="long" />
+		<field name="MOBILE" type="long" />
+		<field name="TELEPHONE" type="long" />
+		<field name="EMAIL" type="String" />
+		<field name="QUERY_RESPONSE" type="String" />
+		<field name="OVERALL_RATING" type="String" />
+		<field name="COMP_INFORMATION" type="String" />
+		<field name="QUALITY_REPORT" type="String" />
+		<field name="DESCRIPTION" type="String" />
+		<field name="COMMENTS" type="String" />
+		<field name="GRIEVANCE" type="String" />
+	</model>
+</model-hints>

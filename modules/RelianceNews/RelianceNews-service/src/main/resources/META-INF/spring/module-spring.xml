@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.rinfra.news.service.impl.PressNewsLocalServiceImpl" id="com.rinfra.news.service.PressNewsLocalService" />
+	<bean class="com.rinfra.news.service.impl.PressNewsServiceImpl" id="com.rinfra.news.service.PressNewsService" />
+	<bean class="com.rinfra.news.service.persistence.impl.PressNewsPersistenceImpl" id="com.rinfra.news.service.persistence.PressNewsPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.rinfra.news.service.persistence.impl.PressNewsFinderImpl" id="com.rinfra.news.service.persistence.PressNewsFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

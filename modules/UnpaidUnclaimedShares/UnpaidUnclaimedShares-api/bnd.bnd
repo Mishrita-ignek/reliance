@@ -1,0 +1,9 @@
+Bundle-Name: UnpaidUnclaimedShares-api
+Bundle-SymbolicName: com.rinfra.unpaidunclaimedshares.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.rinfra.unpaidunclaimedshares.exception,\
+	com.rinfra.unpaidunclaimedshares.model,\
+	com.rinfra.unpaidunclaimedshares.service,\
+	com.rinfra.unpaidunclaimedshares.service.persistence
+-includeresource: META-INF/service.xml=../UnpaidUnclaimedShares-service/service.xml

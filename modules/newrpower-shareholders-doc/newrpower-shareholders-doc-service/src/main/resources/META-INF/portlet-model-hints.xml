@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.newrpower.share.doc.model.RpowerShareHolders">
+		<field name="SRNO" type="long" />
+		<field name="FOLIO_NO" type="String" />
+		<field name="SHARES" type="String" />
+	</model>
+	<model name="com.newrpower.share.doc.model.RpowerShareHoldersDoc">
+		<field name="pressId" type="long" />
+		<field name="heading" type="String" />
+		<field name="description" type="String" />
+		<field name="fileURL" type="String" />
+	</model>
+	<model name="com.newrpower.share.doc.model.ShareHolders">
+		<field name="SRNO" type="long" />
+		<field name="FOLIO_NO" type="String" />
+		<field name="SHARES" type="String" />
+	</model>
+	<model name="com.newrpower.share.doc.model.ShareHoldersDoc">
+		<field name="pressId" type="long" />
+		<field name="heading" type="String" />
+		<field name="description" type="String" />
+		<field name="fileURL" type="String" />
+	</model>
+</model-hints>

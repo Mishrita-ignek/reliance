@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.rinfra.satisfactionsurvey">
+	<author>Mukesh</author>
+	<namespace>Shareholders_Portlet</namespace>
+	<entity name="Shareholders" local-service="true" remote-service="true" table="SHAREHOLDERS" uuid="false" data-source="extDataSource">
+		<column name="SHAREHOLDERSID"  type="long" ></column>
+        <column name="SOLE_ID"  type="long" primary="true"></column>
+        <column name="SOLE_NAME"  type="String"></column>
+        <column name="ID_NUMBER"  type="long"></column>
+		<column name="MOBILE"  type="long"></column>
+		<column name="TELEPHONE"  type="long"></column>
+		<column name="EMAIL"  type="String"></column>
+		<column name="QUERY_RESPONSE"  type="String"></column>
+        <column name="OVERALL_RATING"  type="String"></column>
+        <column name="COMP_INFORMATION"  type="String"></column>
+        <column name="QUALITY_REPORT"  type="String"></column>
+        <column name="DESCRIPTION"  type="String"></column>
+        <column name="COMMENTS"  type="String"></column>
+		<column name="GRIEVANCE"  type="String"></column>
+		
+    </entity>
+</service-builder>

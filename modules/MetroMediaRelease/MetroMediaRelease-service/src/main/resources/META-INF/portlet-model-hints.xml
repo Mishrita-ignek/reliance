@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.metro.mediarelease.model.MetroMediaRelease">
+		<field name="SRNO" type="long" />
+		<field name="HDATE" type="Date" />
+		<field name="HEADLINE" type="String" />
+		<field name="DOCUMENT_NAME" type="String" />
+		<field name="CREATEDATE" type="Date" />
+	</model>
+</model-hints>

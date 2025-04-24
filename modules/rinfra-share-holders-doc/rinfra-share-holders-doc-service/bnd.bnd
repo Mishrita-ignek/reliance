@@ -1,0 +1,5 @@
+Bundle-Name: rinfra-share-holders-doc-service
+Bundle-SymbolicName: rinfra.share.holders.doc.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true

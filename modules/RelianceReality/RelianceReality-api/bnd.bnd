@@ -1,0 +1,9 @@
+Bundle-Name: RelianceReality-api
+Bundle-SymbolicName: com.reliance.reality.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.reliance.reality.exception,\
+	com.reliance.reality.model,\
+	com.reliance.reality.service,\
+	com.reliance.reality.service.persistence
+-includeresource: META-INF/service.xml=../RelianceReality-service/service.xml

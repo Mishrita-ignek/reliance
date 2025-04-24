@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="rinfra.share.holders.doc.model.ShareHolders" />
+	<import class="rinfra.share.holders.doc.model.ShareHoldersDoc" />
+	<class name="rinfra.share.holders.doc.model.impl.ShareHoldersImpl" table="SHARE_HOLDERS">
+		<id name="FOLIO_NO" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="SRNO" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="SHARES" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="rinfra.share.holders.doc.model.impl.ShareHoldersDocImpl" table="SHARE_HOLDERS_DOC">
+		<id name="pressId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="heading" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileURL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

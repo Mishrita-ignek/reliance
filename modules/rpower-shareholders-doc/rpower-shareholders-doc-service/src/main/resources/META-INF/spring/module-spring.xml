@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="rpower.shareholders.doc.service.impl.RpowerShareHoldersLocalServiceImpl" id="rpower.shareholders.doc.service.RpowerShareHoldersLocalService" />
+	<bean class="rpower.shareholders.doc.service.impl.RpowerShareHoldersServiceImpl" id="rpower.shareholders.doc.service.RpowerShareHoldersService" />
+	<bean class="rpower.shareholders.doc.service.persistence.impl.RpowerShareHoldersPersistenceImpl" id="rpower.shareholders.doc.service.persistence.RpowerShareHoldersPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="rpower.shareholders.doc.service.persistence.impl.RpowerShareHoldersFinderImpl" id="rpower.shareholders.doc.service.persistence.RpowerShareHoldersFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="rpower.shareholders.doc.service.impl.RpowerShareHoldersDocLocalServiceImpl" id="rpower.shareholders.doc.service.RpowerShareHoldersDocLocalService" />
+	<bean class="rpower.shareholders.doc.service.impl.RpowerShareHoldersDocServiceImpl" id="rpower.shareholders.doc.service.RpowerShareHoldersDocService" />
+	<bean class="rpower.shareholders.doc.service.persistence.impl.RpowerShareHoldersDocPersistenceImpl" id="rpower.shareholders.doc.service.persistence.RpowerShareHoldersDocPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="rpower.shareholders.doc.service.persistence.impl.RpowerShareHoldersDocFinderImpl" id="rpower.shareholders.doc.service.persistence.RpowerShareHoldersDocFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

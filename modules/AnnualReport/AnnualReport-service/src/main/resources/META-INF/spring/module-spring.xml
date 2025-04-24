@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.rinfra.annual.service.impl.AnnualReportLocalServiceImpl" id="com.rinfra.annual.service.AnnualReportLocalService" />
+	<bean class="com.rinfra.annual.service.impl.AnnualReportServiceImpl" id="com.rinfra.annual.service.AnnualReportService" />
+	<bean class="com.rinfra.annual.service.persistence.impl.AnnualReportPersistenceImpl" id="com.rinfra.annual.service.persistence.AnnualReportPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

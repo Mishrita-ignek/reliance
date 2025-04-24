@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.metro.mediarelease.model.MetroMediaRelease" />
+	<class name="com.metro.mediarelease.model.impl.MetroMediaReleaseImpl" table="mumbai_metro_media_release">
+		<id name="SRNO" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="HDATE" type="org.hibernate.type.TimestampType" />
+		<property name="HEADLINE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="DOCUMENT_NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="CREATEDATE" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

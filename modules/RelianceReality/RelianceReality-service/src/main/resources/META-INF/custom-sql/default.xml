@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+	<sql id="getPropertyRecord"> 
+      <![CDATA[ 
+           SELECT * FROM REALITY_PROPERTY_MSTR R WHERE R.CITY = ? 
+           ]]>
+	</sql>
+</custom-sql>

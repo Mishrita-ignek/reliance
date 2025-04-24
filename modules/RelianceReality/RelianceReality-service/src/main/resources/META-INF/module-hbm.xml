@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.reliance.reality.model.RealityPropertyMaster" />
+	<import class="com.reliance.reality.model.RelianceReality" />
+	<class name="com.reliance.reality.model.impl.RealityPropertyMasterImpl" table="REALITY_PROPERTY_MSTR">
+		<id column="PROPERTY_ID" name="property_ID" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="CITY" name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="LOCATION" name="location" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="ADDRESS" name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="AREA" name="area" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="TYPE" name="type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="GUIDANCEPRICE" name="guidancePrice" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="PROPERTYBID" name="propertyBid" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="OFFER_PRICE" name="offerPrice" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="AGEOFPROPERTY" name="ageOfProperty" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="CREATEDATE" name="createDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.reliance.reality.model.impl.RelianceRealityImpl" table="RELIANCE_REALITY">
+		<id column="R_ID" name="r_Id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="CITY" name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="LOCATION" name="location" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="ADDRESS" name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="AREA" name="area" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="TYPE" name="type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="GUIDANCEPRICE" name="guidancePrice" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="PROPERTY_ID" name="propertyId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="OFFER_PRICE" name="offerPrice" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="FUNDING" name="funding" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="DAYS" name="days" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="EMPCODE" name="empcode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="NAME" name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="EMAIL_ID" name="email_id" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="MOBILE" name="mobile" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="AGEOFPROPERTY" name="ageOfProperty" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="GROUPCOMPANYNAME" name="groupCompanyName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="CREATEDATE" name="createDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

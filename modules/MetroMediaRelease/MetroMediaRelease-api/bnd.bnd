@@ -1,0 +1,9 @@
+Bundle-Name: MetroMediaRelease-api
+Bundle-SymbolicName: com.metro.mediarelease.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.metro.mediarelease.exception,\
+	com.metro.mediarelease.model,\
+	com.metro.mediarelease.service,\
+	com.metro.mediarelease.service.persistence
+-includeresource: META-INF/service.xml=../MetroMediaRelease-service/service.xml

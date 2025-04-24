@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="rinfra.share.holders.doc.service.impl.ShareHoldersLocalServiceImpl" id="rinfra.share.holders.doc.service.ShareHoldersLocalService" />
+	<bean class="rinfra.share.holders.doc.service.impl.ShareHoldersServiceImpl" id="rinfra.share.holders.doc.service.ShareHoldersService" />
+	<bean class="rinfra.share.holders.doc.service.persistence.impl.ShareHoldersPersistenceImpl" id="rinfra.share.holders.doc.service.persistence.ShareHoldersPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="rinfra.share.holders.doc.service.persistence.impl.ShareHoldersFinderImpl" id="rinfra.share.holders.doc.service.persistence.ShareHoldersFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="rinfra.share.holders.doc.service.impl.ShareHoldersDocLocalServiceImpl" id="rinfra.share.holders.doc.service.ShareHoldersDocLocalService" />
+	<bean class="rinfra.share.holders.doc.service.impl.ShareHoldersDocServiceImpl" id="rinfra.share.holders.doc.service.ShareHoldersDocService" />
+	<bean class="rinfra.share.holders.doc.service.persistence.impl.ShareHoldersDocPersistenceImpl" id="rinfra.share.holders.doc.service.persistence.ShareHoldersDocPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="rinfra.share.holders.doc.service.persistence.impl.ShareHoldersDocFinderImpl" id="rinfra.share.holders.doc.service.persistence.ShareHoldersDocFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

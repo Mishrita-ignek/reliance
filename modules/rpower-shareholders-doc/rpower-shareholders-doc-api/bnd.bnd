@@ -1,0 +1,9 @@
+Bundle-Name: rpower-shareholders-doc-api
+Bundle-SymbolicName: rpower.shareholders.doc.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	rpower.shareholders.doc.exception,\
+	rpower.shareholders.doc.model,\
+	rpower.shareholders.doc.service,\
+	rpower.shareholders.doc.service.persistence
+-includeresource: META-INF/service.xml=../rpower-shareholders-doc-service/service.xml

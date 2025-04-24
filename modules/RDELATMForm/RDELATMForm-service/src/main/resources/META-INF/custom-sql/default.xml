@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+   <sql id="fetchcandidateLoginDetails"> 
+      <![CDATA[ 
+      SELECT * FROM CANDIDATE_APPLICATION WHERE EMAILADDRESS=? AND PASSWORD_=?]]>      
+   </sql>  
+   <sql id="fetchcandidateEmailVerified"> 
+      <![CDATA[ 
+      SELECT * FROM CANDIDATE_APPLICATION WHERE EMAILADDRESS=?]]>      
+   </sql> 
+   <sql id="updatecandidatePassword"> 
+      <![CDATA[ 
+      UPDATE CANDIDATE_APPLICATION SET PASSWORD_=? WHERE EMAILADDRESS=?]]>      
+   </sql> 
+</custom-sql>
+
+

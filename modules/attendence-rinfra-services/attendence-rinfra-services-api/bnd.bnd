@@ -1,0 +1,9 @@
+Bundle-Name: attendence-rinfra-services-api
+Bundle-SymbolicName: attendence.rinfra.services.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	attendence.rinfra.services.exception,\
+	attendence.rinfra.services.model,\
+	attendence.rinfra.services.service,\
+	attendence.rinfra.services.service.persistence
+-includeresource: META-INF/service.xml=../attendence-rinfra-services-service/service.xml

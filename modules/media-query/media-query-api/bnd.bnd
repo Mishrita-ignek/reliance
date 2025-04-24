@@ -1,0 +1,9 @@
+Bundle-Name: media-query-api
+Bundle-SymbolicName: com.media.query.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.media.query.exception,\
+	com.media.query.model,\
+	com.media.query.service,\
+	com.media.query.service.persistence
+-includeresource: META-INF/service.xml=../media-query-service/service.xml

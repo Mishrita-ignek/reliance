@@ -1,0 +1,9 @@
+Bundle-Name: AnnualReport-api
+Bundle-SymbolicName: com.rinfra.annual.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.rinfra.annual.exception,\
+	com.rinfra.annual.model,\
+	com.rinfra.annual.service,\
+	com.rinfra.annual.service.persistence
+-includeresource: META-INF/service.xml=../AnnualReport-service/service.xml

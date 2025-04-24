@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.rinfra.unpaid.unclaimed.devidend.service.impl.RpowerUnpaidUnclaimedDevidendLocalServiceImpl" id="com.rinfra.unpaid.unclaimed.devidend.service.RpowerUnpaidUnclaimedDevidendLocalService" />
+	<bean class="com.rinfra.unpaid.unclaimed.devidend.service.impl.RpowerUnpaidUnclaimedDevidendServiceImpl" id="com.rinfra.unpaid.unclaimed.devidend.service.RpowerUnpaidUnclaimedDevidendService" />
+	<bean class="com.rinfra.unpaid.unclaimed.devidend.service.persistence.impl.RpowerUnpaidUnclaimedDevidendPersistenceImpl" id="com.rinfra.unpaid.unclaimed.devidend.service.persistence.RpowerUnpaidUnclaimedDevidendPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.rinfra.unpaid.unclaimed.devidend.service.persistence.impl.RpowerUnpaidUnclaimedDevidendFinderImpl" id="com.rinfra.unpaid.unclaimed.devidend.service.persistence.RpowerUnpaidUnclaimedDevidendFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.rinfra.unpaid.unclaimed.devidend.service.impl.UnpaidUnclaimedDevidendLocalServiceImpl" id="com.rinfra.unpaid.unclaimed.devidend.service.UnpaidUnclaimedDevidendLocalService" />
+	<bean class="com.rinfra.unpaid.unclaimed.devidend.service.impl.UnpaidUnclaimedDevidendServiceImpl" id="com.rinfra.unpaid.unclaimed.devidend.service.UnpaidUnclaimedDevidendService" />
+	<bean class="com.rinfra.unpaid.unclaimed.devidend.service.persistence.impl.UnpaidUnclaimedDevidendPersistenceImpl" id="com.rinfra.unpaid.unclaimed.devidend.service.persistence.UnpaidUnclaimedDevidendPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.rinfra.unpaid.unclaimed.devidend.service.persistence.impl.UnpaidUnclaimedDevidendFinderImpl" id="com.rinfra.unpaid.unclaimed.devidend.service.persistence.UnpaidUnclaimedDevidendFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

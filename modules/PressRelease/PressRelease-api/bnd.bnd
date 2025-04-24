@@ -1,0 +1,9 @@
+Bundle-Name: PressRelease-api
+Bundle-SymbolicName: com.relieanceada.rinfra.portal.pressRelease.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.relieanceada.rinfra.portal.pressRelease.exception,\
+	com.relieanceada.rinfra.portal.pressRelease.model,\
+	com.relieanceada.rinfra.portal.pressRelease.service,\
+	com.relieanceada.rinfra.portal.pressRelease.service.persistence
+-includeresource: META-INF/service.xml=../PressRelease-service/service.xml

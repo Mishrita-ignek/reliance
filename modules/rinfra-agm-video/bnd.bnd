@@ -1,0 +1,4 @@
+Bundle-Name: rinfra-agm-video
+Bundle-SymbolicName: rinfra.agm.video
+Bundle-Version: 1.0.0
+Export-Package: rinfra.agm.video.constants

@@ -1,0 +1,2 @@
+contextPath=/OCCAlertWebServiceNew
+authVerifierProperties=auth.verifier.BasicAuthHeaderAuthVerifier.urls.includes=*

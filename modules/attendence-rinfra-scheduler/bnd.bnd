@@ -1,0 +1,4 @@
+Bundle-Name: attendence-rinfra-scheduler
+Bundle-SymbolicName: attendence.rinfra.scheduler
+Bundle-Version: 1.0.0
+Export-Package: attendence.rinfra.scheduler.constants

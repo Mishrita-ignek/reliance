@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="OCCModuleNew.service.impl.OccMessageNewLocalServiceImpl" id="OCCModuleNew.service.OccMessageNewLocalService" />
+	<bean class="OCCModuleNew.service.impl.OccMessageNewServiceImpl" id="OCCModuleNew.service.OccMessageNewService" />
+	<bean class="OCCModuleNew.service.persistence.impl.OccMessageNewPersistenceImpl" id="OCCModuleNew.service.persistence.OccMessageNewPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="OCCModuleNew.service.persistence.impl.OccMessageNewFinderImpl" id="OCCModuleNew.service.persistence.OccMessageNewFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="OCCModuleNew.service.impl.OccNewLocalServiceImpl" id="OCCModuleNew.service.OccNewLocalService" />
+	<bean class="OCCModuleNew.service.impl.OccNewServiceImpl" id="OCCModuleNew.service.OccNewService" />
+	<bean class="OCCModuleNew.service.persistence.impl.OccNewPersistenceImpl" id="OCCModuleNew.service.persistence.OccNewPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="OCCModuleNew.service.persistence.impl.OccNewFinderImpl" id="OCCModuleNew.service.persistence.OccNewFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

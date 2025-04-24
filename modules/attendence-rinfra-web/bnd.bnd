@@ -1,0 +1,4 @@
+Bundle-Name: attendence-rinfra-web
+Bundle-SymbolicName: attendence.rinfra.web
+Bundle-Version: 1.0.0
+Export-Package: attendence.rinfra.web.constants

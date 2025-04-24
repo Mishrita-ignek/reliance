@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="OCCModuleNew.model.OccMessageNew" />
+	<import class="OCCModuleNew.model.OccNew" />
+	<class name="OCCModuleNew.model.impl.OccMessageNewImpl" table="OCCMESSAGENEW">
+		<id name="MSG_ID" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="LISTNAME" name="ListName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="MESSAGE" name="Message" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="MSGSENDDATE" name="MSgSendDate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="SEVERITY" name="Severity" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="OCCModuleNew.model.impl.OccNewImpl" table="OCCNEW">
+		<id name="OCCID" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="LISTID" name="ListID" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="LISTNAME" name="ListName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="ROLLNO" name="RollNo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="NAME" name="Name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="MOBILENO" name="MobileNo" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="EMAIL" name="Email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="DEPT" name="Dept" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

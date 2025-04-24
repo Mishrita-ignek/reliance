@@ -1,0 +1,4 @@
+Bundle-Name: rinfra-share-doc
+Bundle-SymbolicName: com.rinfra.share.doc
+Bundle-Version: 1.0.0
+Export-Package: com.rinfra.share.doc.constants

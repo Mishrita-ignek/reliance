@@ -1,0 +1,4 @@
+Bundle-Name: Rpower-UnpaidUnclaimedDivident-web
+Bundle-SymbolicName: com.rpower.unpaid.unclaimed.divident
+Bundle-Version: 1.0.0
+Export-Package: com.rpower.unpaid.unclaimed.divident.constants

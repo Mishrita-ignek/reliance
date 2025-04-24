@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="attendence.rinfra.services.model.AttendenceTransaction">
+		<field name="srNo" type="String" />
+		<field name="employeeCode" type="String" />
+		<field name="employeeName" type="String" />
+		<field name="mobile" type="String" />
+		<field name="userDefined1" type="String" />
+		<field name="userDefined2" type="String" />
+		<field name="attendenceMode" type="String" />
+		<field name="attendenceDateTime" type="String" />
+	</model>
+	<model name="attendence.rinfra.services.model.EmpMaster">
+		<field name="employeeCode" type="String" />
+		<field name="employeeName" type="String" />
+		<field name="mobile" type="String" />
+		<field name="userDefined1" type="String" />
+		<field name="userDefined2" type="String" />
+	</model>
+	<model name="attendence.rinfra.services.model.EmpOtpMaster">
+		<field name="empMobile" type="String" />
+		<field name="otp" type="String" />
+	</model>
+</model-hints>

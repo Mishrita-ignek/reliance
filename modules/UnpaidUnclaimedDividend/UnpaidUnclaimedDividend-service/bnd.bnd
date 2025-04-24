@@ -1,0 +1,5 @@
+Bundle-Name: UnpaidUnclaimedDividend-service
+Bundle-SymbolicName: com.rinfra.unpaid.unclaimed.devidend.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true

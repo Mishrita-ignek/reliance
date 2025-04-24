@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="attendence.rinfra.services.service.impl.AttendenceTransactionLocalServiceImpl" id="attendence.rinfra.services.service.AttendenceTransactionLocalService" />
+	<bean class="attendence.rinfra.services.service.persistence.impl.AttendenceTransactionPersistenceImpl" id="attendence.rinfra.services.service.persistence.AttendenceTransactionPersistence" parent="basePersistence">
+		<property name="dataSource" ref="rinfrauser" />
+	</bean>
+	<bean class="attendence.rinfra.services.service.persistence.impl.AttendenceTransactionFinderImpl" id="attendence.rinfra.services.service.persistence.AttendenceTransactionFinder" parent="basePersistence">
+		<property name="dataSource" ref="rinfrauser" />
+	</bean>
+	<bean class="attendence.rinfra.services.service.impl.EmpMasterLocalServiceImpl" id="attendence.rinfra.services.service.EmpMasterLocalService" />
+	<bean class="attendence.rinfra.services.service.persistence.impl.EmpMasterPersistenceImpl" id="attendence.rinfra.services.service.persistence.EmpMasterPersistence" parent="basePersistence">
+		<property name="dataSource" ref="rinfrauser" />
+	</bean>
+	<bean class="attendence.rinfra.services.service.impl.EmpOtpMasterLocalServiceImpl" id="attendence.rinfra.services.service.EmpOtpMasterLocalService" />
+	<bean class="attendence.rinfra.services.service.persistence.impl.EmpOtpMasterPersistenceImpl" id="attendence.rinfra.services.service.persistence.EmpOtpMasterPersistence" parent="basePersistence">
+		<property name="dataSource" ref="rinfrauser" />
+	</bean>
+</beans>

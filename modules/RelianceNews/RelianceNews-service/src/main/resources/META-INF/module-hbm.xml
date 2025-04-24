@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.rinfra.news.model.PressNews" />
+	<class name="com.rinfra.news.model.impl.PressNewsImpl" table="Rinfra_news">
+		<id name="newsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="headLine" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="publication" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="downloadUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="date_" name="date" type="org.hibernate.type.TimestampType" />
+		<property name="year" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="month" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property column="show_" name="show" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

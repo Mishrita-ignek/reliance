@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+   <sql id="folioDetailsSQLQuery"> 
+      <![CDATA[ 
+           SELECT * FROM UNPAID_DIVIDEND_SHARE WHERE FOLIO_NO = ?]]>
+   </sql>
+</custom-sql>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.rinfra.unpaidunclaimedshares.model.unpaidUnclaimedDevidend" />
+	<class name="com.rinfra.unpaidunclaimedshares.model.impl.unpaidUnclaimedDevidendImpl" table="UNPAID_DIVIDEND_SHARE">
+		<id name="SRNO" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="FOLIO_NO" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="NAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ADD1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ADD2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ADD3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ADD4" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ADD5" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ADD6" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="JT1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="JT2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="JT3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SHARES" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

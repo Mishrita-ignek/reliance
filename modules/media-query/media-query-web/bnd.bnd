@@ -1,0 +1,4 @@
+Bundle-Name: media-query-web
+Bundle-SymbolicName: com.media.query
+Bundle-Version: 1.0.0
+Export-Package: com.media.query.constants

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.rinfra.satisfactionsurvey.service.impl.ShareholdersLocalServiceImpl" id="com.rinfra.satisfactionsurvey.service.ShareholdersLocalService" />
+	<bean class="com.rinfra.satisfactionsurvey.service.impl.ShareholdersServiceImpl" id="com.rinfra.satisfactionsurvey.service.ShareholdersService" />
+	<bean class="com.rinfra.satisfactionsurvey.service.persistence.impl.ShareholdersPersistenceImpl" id="com.rinfra.satisfactionsurvey.service.persistence.ShareholdersPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

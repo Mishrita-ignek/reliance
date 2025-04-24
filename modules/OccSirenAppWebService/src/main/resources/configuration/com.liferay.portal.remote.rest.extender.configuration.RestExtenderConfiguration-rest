@@ -1,0 +1,2 @@
+contextPaths=/OccSirenAppWebService
+jaxRsServiceFilterStrings=(component.name=OccSirenAppWebService.application.OccSirenAppWebServiceApplication)

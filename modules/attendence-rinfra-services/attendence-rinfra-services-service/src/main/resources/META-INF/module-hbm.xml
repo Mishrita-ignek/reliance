@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="attendence.rinfra.services.model.AttendenceTransaction" />
+	<import class="attendence.rinfra.services.model.EmpMaster" />
+	<import class="attendence.rinfra.services.model.EmpOtpMaster" />
+	<class name="attendence.rinfra.services.model.impl.AttendenceTransactionImpl" table="ATTENDENCE_TRANSACTION_TABLE">
+		<id column="SRNO" name="srNo" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property column="EMPLOYEE_CODE" name="employeeCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="EMPLOYEE_NAME" name="employeeName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="MOBILE_NUMBER" name="mobile" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="USER_DEFINED_1" name="userDefined1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="USER_DEFINED_2" name="userDefined2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="ATTENDENCE_MODE" name="attendenceMode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="ATTENDENCE_DATETIME" name="attendenceDateTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="attendence.rinfra.services.model.impl.EmpMasterImpl" table="MASTER_TABLE">
+		<id column="EMPLOYEE_CODE" name="employeeCode" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property column="EMPLOYEE_NAME" name="employeeName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="MOBILE_NUMBER" name="mobile" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="USER_DEFINED_1" name="userDefined1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="USER_DEFINED_2" name="userDefined2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="attendence.rinfra.services.model.impl.EmpOtpMasterImpl" table="EMP_OTP_MASTER">
+		<id column="EMP_MOBILE" name="empMobile" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property column="OTP" name="otp" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

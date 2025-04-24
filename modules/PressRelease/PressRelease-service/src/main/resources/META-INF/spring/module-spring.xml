@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.relieanceada.rinfra.portal.pressRelease.service.impl.PressReleaseLocalServiceImpl" id="com.relieanceada.rinfra.portal.pressRelease.service.PressReleaseLocalService" />
+	<bean class="com.relieanceada.rinfra.portal.pressRelease.service.impl.PressReleaseServiceImpl" id="com.relieanceada.rinfra.portal.pressRelease.service.PressReleaseService" />
+	<bean class="com.relieanceada.rinfra.portal.pressRelease.service.persistence.impl.PressReleasePersistenceImpl" id="com.relieanceada.rinfra.portal.pressRelease.service.persistence.PressReleasePersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.relieanceada.rinfra.portal.pressRelease.service.persistence.impl.PressReleaseFinderImpl" id="com.relieanceada.rinfra.portal.pressRelease.service.persistence.PressReleaseFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

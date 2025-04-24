@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.rpower.unpaid.unclaimed.dividend.service.impl.RpowerUnpaidUnclaimedDevidendLocalServiceImpl" id="com.rpower.unpaid.unclaimed.dividend.service.RpowerUnpaidUnclaimedDevidendLocalService" />
+	<bean class="com.rpower.unpaid.unclaimed.dividend.service.impl.RpowerUnpaidUnclaimedDevidendServiceImpl" id="com.rpower.unpaid.unclaimed.dividend.service.RpowerUnpaidUnclaimedDevidendService" />
+	<bean class="com.rpower.unpaid.unclaimed.dividend.service.persistence.impl.RpowerUnpaidUnclaimedDevidendPersistenceImpl" id="com.rpower.unpaid.unclaimed.dividend.service.persistence.RpowerUnpaidUnclaimedDevidendPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.rpower.unpaid.unclaimed.dividend.service.persistence.impl.RpowerUnpaidUnclaimedDevidendFinderImpl" id="com.rpower.unpaid.unclaimed.dividend.service.persistence.RpowerUnpaidUnclaimedDevidendFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

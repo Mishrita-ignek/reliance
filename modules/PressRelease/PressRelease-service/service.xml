@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.relieanceada.rinfra.portal.pressRelease">
+	<author>Vipin Singh</author>
+	<namespace>PRESS_RELEASE</namespace>
+    <entity name="PressRelease" local-service="true" cache-enabled="false" data-source="extDataSource">
+        <column name="pressId" type="long" primary="true"></column>
+        <column name="newsYear" type="String"></column>
+        <column name="newsDate" type="Date"></column>
+        <column name="heading" type="String"></column>
+        <column name="data" type="String"></column>
+        <column name="description" type="String"></column>
+        <column name="show" type="String"></column>
+        <column name="createdDate" type="Date"></column>
+        <column name="fileName" type="String"></column>
+        <column name="fileURL" type="String"></column>
+        <order by="desc">
+            <order-column order-by="desc" name="newsDate"></order-column>
+        </order>
+      	
+         <finder return-type="Collection" name="selectedNewsYear">
+            <finder-column name="newsYear" />
+        </finder>
+        
+         <finder return-type="Collection" name="heading">
+            <finder-column name="heading" />
+        </finder>
+        
+    </entity>
+	
+	
+</service-builder>

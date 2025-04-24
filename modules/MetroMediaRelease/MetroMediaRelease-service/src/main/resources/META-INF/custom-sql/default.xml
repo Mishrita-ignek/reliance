@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+	<sql id="getMediaRelease"> 
+      <![CDATA[
+    SELECT * FROM mumbai_metro_media_release WHERE SRNO!=0
+	AND TO_CHAR (HDATE,'MM/DD/YYYY') LIKE ?]]>
+	</sql>
+	<!-- <sql id="getMediaRelease">
+      <![CDATA[ 
+     SELECT * FROM mumbai_metro_media_release WHERE HDATE LIKE ? ]]>
+	</sql> -->
+</custom-sql>
+
+

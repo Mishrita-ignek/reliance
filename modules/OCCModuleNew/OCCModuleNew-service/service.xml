@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="OCCModuleNew">
+	<author>Mukesh Patidar</author>
+	<namespace>OCCNew</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true""> -->
+	<entity local-service="true" name="OccNew" remote-service="true" uuid="false" table="OCCNEW" data-source="extDataSource" cache-enabled="false">
+
+
+		<!-- PK fields -->
+		<column name="OCCID" db-name="OCCID" primary="true" type="long" />
+
+		<!-- Audit fields -->
+		<column name="ListID" db-name="LISTID" type="long" />
+		<column name="ListName"  db-name="LISTNAME" type="String" />
+		<column name="RollNo" db-name="ROLLNO" type="String" />
+		<column name="Name" db-name="NAME" type="String" />
+		<column name="MobileNo" db-name="MOBILENO" type="long" />
+		<column name="Email" db-name="EMAIL" type="String" />
+		<column name="Dept" db-name="DEPT" type="String" />
+	</entity>
+
+	<entity local-service="true" name="OccMessageNew" remote-service="true" uuid="false" table="OCCMESSAGENEW" data-source="extDataSource" cache-enabled="false">
+
+		<!-- PK fields -->
+		<column name="MSG_ID" db-name="MSG_ID" primary="true" type="long" />
+		<!-- Audit fields -->
+		<column name="ListName" db-name="LISTNAME" type="String" />
+		<column name="Message" db-name="MESSAGE" type="String" />
+		<column name="MSgSendDate" db-name="MSGSENDDATE" type="String" />
+		<column name="Severity" db-name="SEVERITY" type="String" />
+		
+	</entity>
+</service-builder>

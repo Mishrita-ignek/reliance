@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.newrpower.share.doc.service.impl.RpowerShareHoldersLocalServiceImpl" id="com.newrpower.share.doc.service.RpowerShareHoldersLocalService" />
+	<bean class="com.newrpower.share.doc.service.impl.RpowerShareHoldersServiceImpl" id="com.newrpower.share.doc.service.RpowerShareHoldersService" />
+	<bean class="com.newrpower.share.doc.service.persistence.impl.RpowerShareHoldersPersistenceImpl" id="com.newrpower.share.doc.service.persistence.RpowerShareHoldersPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.newrpower.share.doc.service.impl.RpowerShareHoldersDocLocalServiceImpl" id="com.newrpower.share.doc.service.RpowerShareHoldersDocLocalService" />
+	<bean class="com.newrpower.share.doc.service.impl.RpowerShareHoldersDocServiceImpl" id="com.newrpower.share.doc.service.RpowerShareHoldersDocService" />
+	<bean class="com.newrpower.share.doc.service.persistence.impl.RpowerShareHoldersDocPersistenceImpl" id="com.newrpower.share.doc.service.persistence.RpowerShareHoldersDocPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.newrpower.share.doc.service.impl.ShareHoldersLocalServiceImpl" id="com.newrpower.share.doc.service.ShareHoldersLocalService" />
+	<bean class="com.newrpower.share.doc.service.impl.ShareHoldersServiceImpl" id="com.newrpower.share.doc.service.ShareHoldersService" />
+	<bean class="com.newrpower.share.doc.service.persistence.impl.ShareHoldersPersistenceImpl" id="com.newrpower.share.doc.service.persistence.ShareHoldersPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.newrpower.share.doc.service.impl.ShareHoldersDocLocalServiceImpl" id="com.newrpower.share.doc.service.ShareHoldersDocLocalService" />
+	<bean class="com.newrpower.share.doc.service.impl.ShareHoldersDocServiceImpl" id="com.newrpower.share.doc.service.ShareHoldersDocService" />
+	<bean class="com.newrpower.share.doc.service.persistence.impl.ShareHoldersDocPersistenceImpl" id="com.newrpower.share.doc.service.persistence.ShareHoldersDocPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

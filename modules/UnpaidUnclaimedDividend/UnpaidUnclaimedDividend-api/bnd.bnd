@@ -1,0 +1,9 @@
+Bundle-Name: UnpaidUnclaimedDividend-api
+Bundle-SymbolicName: com.rinfra.unpaid.unclaimed.devidend.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.rinfra.unpaid.unclaimed.devidend.exception,\
+	com.rinfra.unpaid.unclaimed.devidend.model,\
+	com.rinfra.unpaid.unclaimed.devidend.service,\
+	com.rinfra.unpaid.unclaimed.devidend.service.persistence
+-includeresource: META-INF/service.xml=../UnpaidUnclaimedDividend-service/service.xml

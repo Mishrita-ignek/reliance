@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="OCCModuleNew.model.OccMessageNew">
+		<field name="MSG_ID" type="long" />
+		<field name="ListName" type="String" />
+		<field name="Message" type="String" />
+		<field name="MSgSendDate" type="String" />
+		<field name="Severity" type="String" />
+	</model>
+	<model name="OCCModuleNew.model.OccNew">
+		<field name="OCCID" type="long" />
+		<field name="ListID" type="long" />
+		<field name="ListName" type="String" />
+		<field name="RollNo" type="String" />
+		<field name="Name" type="String" />
+		<field name="MobileNo" type="long" />
+		<field name="Email" type="String" />
+		<field name="Dept" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,9 @@
+Bundle-Name: Rpower-UnpaidUnclaimedDividend-api
+Bundle-SymbolicName: com.rpower.unpaid.unclaimed.dividend.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.rpower.unpaid.unclaimed.dividend.exception,\
+	com.rpower.unpaid.unclaimed.dividend.model,\
+	com.rpower.unpaid.unclaimed.dividend.service,\
+	com.rpower.unpaid.unclaimed.dividend.service.persistence
+-includeresource: META-INF/service.xml=../Rpower-UnpaidUnclaimedDividend-service/service.xml

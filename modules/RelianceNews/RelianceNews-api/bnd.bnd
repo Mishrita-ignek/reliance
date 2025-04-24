@@ -1,0 +1,9 @@
+Bundle-Name: RelianceNews-api
+Bundle-SymbolicName: com.rinfra.news.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.rinfra.news.exception,\
+	com.rinfra.news.model,\
+	com.rinfra.news.service,\
+	com.rinfra.news.service.persistence
+-includeresource: META-INF/service.xml=../RelianceNews-service/service.xml

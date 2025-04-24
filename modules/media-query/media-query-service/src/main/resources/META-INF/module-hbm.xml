@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.media.query.model.MediaQuery" />
+	<class name="com.media.query.model.impl.MediaQueryImpl" table="MEDIA_QUERY">
+		<id column="SR_NO" name="srNo" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="JOURNALIST_NAME" name="journalistName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="ORGANISATION_NAME" name="newsOrganisationName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="ORGANISATION_TYPE" name="organisationType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="MOBILE" name="mobile" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="EMAIL" name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="SUBJECT" name="subject" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="MEDIAQUERY" name="mediaQuery" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

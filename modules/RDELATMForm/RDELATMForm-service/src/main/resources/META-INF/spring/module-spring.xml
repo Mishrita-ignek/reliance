@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.redlatm.form.service.impl.CandidateFormLocalServiceImpl" id="com.redlatm.form.service.CandidateFormLocalService" />
+	<bean class="com.redlatm.form.service.impl.CandidateFormServiceImpl" id="com.redlatm.form.service.CandidateFormService" />
+	<bean class="com.redlatm.form.service.persistence.impl.CandidateFormPersistenceImpl" id="com.redlatm.form.service.persistence.CandidateFormPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.redlatm.form.service.persistence.impl.CandidateFormFinderImpl" id="com.redlatm.form.service.persistence.CandidateFormFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+	<sql id="getPublication"> 
+      <![CDATA[ 
+          SELECT * FROM mumbai_metro_news_media WHERE SRNO!=0 
+		  AND TO_CHAR (HDATE,'MM/DD/YYYY') LIKE ? ORDER BY HDATE ASC]]>
+	</sql>
+	
+	
+	<!-- <sql id="getAllNewsNew"> 
+      <![CDATA[ 
+          SELECT * FROM mumbai_metro_news_media WHERE SRNO!=0 
+		  AND TO_CHAR (HDATE,'MM/DD/YYYY') LIKE ? ORDER BY HDATE ASC]]>
+	</sql>
+	 -->
+	
+	<sql id="getNews"> 
+      <![CDATA[ 
+    	  SELECT * FROM mumbai_metro_news_media WHERE SRNO!=0 AND PUBLICATION = ?
+		  AND TO_CHAR (HDATE,'MM/DD/YYYY') LIKE ? ORDER BY HDATE ASC]]>
+	</sql>
+</custom-sql>
+
+<!-- <sql id="getNews"> 
+      <![CDATA[ 
+    	  SELECT * FROM mumbai_metro_news_media WHERE SRNO!=0 AND PUBLICATION = ?  
+		  AND TO_CHAR (HDATE,'MM/DD/YYYY') LIKE ? ORDER BY HDATE ASC]]>
+	</sql>
+</custom-sql> -->
+
+
+

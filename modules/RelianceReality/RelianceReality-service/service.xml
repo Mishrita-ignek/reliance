@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.reliance.reality">
+	<namespace>RelianceReality</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="RelianceReality" table="RELIANCE_REALITY"   uuid="false" data-source="extDataSource">
+
+		<column name="r_Id" db-name="R_ID" primary="true" type="long" />
+		<column name="city" db-name="CITY" type="String" />
+		<column name="location" db-name="LOCATION" type="String" />
+		<column name="address" db-name="ADDRESS" type="String" />
+		<column name="area" db-name="AREA" type="String" />
+		<column name="type" db-name="TYPE" type="String" />
+		<column name="guidancePrice" db-name="GUIDANCEPRICE" type="long" />
+		<column name="propertyId" db-name="PROPERTY_ID" type="String" />
+		<column name="offerPrice" db-name="OFFER_PRICE" type="String" />
+		<column name="funding" db-name="FUNDING" type="String" />
+		<column name="days" db-name="DAYS" type="long" />
+		<column name="empcode" db-name="EMPCODE" type="String" />
+		<column name="name" db-name="NAME" type="String" />
+		<column name="email_id" db-name="EMAIL_ID" type="String" />
+		<column name="mobile" db-name="MOBILE" type="String" />
+		<column name="ageOfProperty" db-name="AGEOFPROPERTY" type="String" />
+		<column name="groupCompanyName" db-name="GROUPCOMPANYNAME" type="String" />
+		
+		<column name="createDate"    db-name="CREATEDATE"  type="Date" />
+		
+	</entity>
+	
+	<entity local-service="true" name="RealityPropertyMaster" table="REALITY_PROPERTY_MSTR"   uuid="false" data-source="extDataSource">
+
+		<column name="property_ID" db-name="PROPERTY_ID" primary="true" type="long" />
+		
+		<column name="city" db-name="CITY" type="String" />
+		<column name="location" db-name="LOCATION" type="String" />
+		<column name="address" db-name="ADDRESS" type="String" />
+		<column name="area" db-name="AREA" type="String" />
+		<column name="type" db-name="TYPE" type="String" />
+		<column name="guidancePrice" db-name="GUIDANCEPRICE" type="String" />
+		<column name="propertyBid" db-name="PROPERTYBID" type="long" />
+		<column name="offerPrice" db-name="OFFER_PRICE" type="String" />
+		<column name="ageOfProperty" db-name="AGEOFPROPERTY" type="String" />
+		<column name="createDate"    db-name="CREATEDATE"  type="Date" />
+		
+	</entity>
+</service-builder>

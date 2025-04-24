@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.rinfra.news.model.PressNews">
+		<field name="newsId" type="long" />
+		<field name="headLine" type="String" />
+		<field name="publication" type="String" />
+		<field name="downloadUrl" type="String" />
+		<field name="fileName" type="String" />
+		<field name="date" type="Date" />
+		<field name="year" type="int" />
+		<field name="month" type="int" />
+		<field name="show" type="String" />
+	</model>
+</model-hints>

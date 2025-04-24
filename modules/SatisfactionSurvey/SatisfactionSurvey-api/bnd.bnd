@@ -1,0 +1,9 @@
+Bundle-Name: SatisfactionSurvey-api
+Bundle-SymbolicName: com.rinfra.satisfactionsurvey.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.rinfra.satisfactionsurvey.exception,\
+	com.rinfra.satisfactionsurvey.model,\
+	com.rinfra.satisfactionsurvey.service,\
+	com.rinfra.satisfactionsurvey.service.persistence
+-includeresource: META-INF/service.xml=../SatisfactionSurvey-service/service.xml

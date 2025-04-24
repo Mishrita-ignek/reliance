@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.rinfra.unpaidunclaimedshares.model.unpaidUnclaimedDevidend">
+		<field name="SRNO" type="long" />
+		<field name="FOLIO_NO" type="String" />
+		<field name="NAME" type="String" />
+		<field name="ADD1" type="String" />
+		<field name="ADD2" type="String" />
+		<field name="ADD3" type="String" />
+		<field name="ADD4" type="String" />
+		<field name="ADD5" type="String" />
+		<field name="ADD6" type="String" />
+		<field name="JT1" type="String" />
+		<field name="JT2" type="String" />
+		<field name="JT3" type="String" />
+		<field name="SHARES" type="String" />
+	</model>
+</model-hints>
