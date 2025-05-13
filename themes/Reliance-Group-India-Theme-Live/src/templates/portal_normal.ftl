@@ -7,7 +7,7 @@
 <head>
 	<title>${the_title}</title>
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
 
 	<@liferay_util["include"] page=top_head_include />
 	<script>
@@ -52,7 +52,6 @@ h2.portlet-title-text.portlet-title-editable {
 <@liferay.control_menu />
 
 <div  class="menu-container" id="wrapper">
-
 	<header id="banner" role="banner">
 		<div id="heading">
 		
@@ -63,23 +62,7 @@ h2.portlet-title-text.portlet-title-editable {
 		</#if> -->
 
 		<#if has_navigation && is_setup_complete>
-	
-
-  
-
 			<#include "${full_templates_path}/desktop_navigation.ftl" />
-			<!--
-			desktop flt 
-			-->
-				
-            </div>
-			<#include "${full_templates_path}/mobile_navigation.ftl" />
-			
-			 <!--
-			 ftl mobile-->
-			 </div>
-			 </div>
-
 		</#if>
 		
 	</header>
