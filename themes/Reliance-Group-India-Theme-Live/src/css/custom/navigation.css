@@ -636,3 +636,8 @@
     width: 150px;}
 .footer_grpbox button {background: none; cursor: pointer;width: 20px;height: 19px; border: none;}
 .fright.top_l2 > a {display: inline-block;float: left;padding: 5px 2px;}
+
+
+.footer_wrap .portlet{
+    margin-bottom: 0;
+}
