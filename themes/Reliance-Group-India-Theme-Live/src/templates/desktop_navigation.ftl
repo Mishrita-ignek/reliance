@@ -40,8 +40,8 @@
                                     <button class='toggle-nested-menu'>+</button>
                                     <a href="#">Reliance Group</a>
                                     <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon"
-                                       style="width:15px; height:15px; vertical-align:middle; margin-right:8px;
-                                       position: absolute;top: 10px;right: 0;">
+                                       style="width:12px; height:12px; vertical-align:middle; margin-right:8px;
+                                       position: absolute;top: 14px;right: 0;">
                                     <ul class='ig-nested'>
                                        <li><a href="/web/reliance-group-india/overview">Overview</a></li>
                                        <li><a href="/web/reliance-group-india/reliance-companies">Reliance
@@ -149,12 +149,11 @@
                               <button class='toggle-submenu'>+</button>
                               <a href="#" class="ig-top_link" id="t06">Careers</a>
                               <ul class="ig-sub">
-                                  <li><a href="web/reliance-group-india/human-resources">Human Resources</a></li>
+                                  <li><a href="human-resources">Human Resources</a></li>
                               </ul>
                            </li>
                            <li class="ig-top">
-                              <a href="mailto:contact@relianceada.com" class="ig-top_link" id="t10">Contact
-                              Us</a>
+                              <a href="contact-us" class="ig-top_link" id="t10">Contact Us</a>
                            </li>
                         </ul>
                      </div>
@@ -167,19 +166,19 @@
                         <select name="select" class="ig-custom-select" id="groupSelect"
                            onchange="if (this.value) window.open(this.value, '_blank')">
                            <option value="" disabled selected hidden>Group Websites</option>
-                           <option value="http://www.reliancegroupindia.com">&nbsp; Reliance Group</option>
-                           <option value="http://www.rinfra.com">&nbsp; Reliance Infrastructure</option>
-                           <option value="http://www.reliancepower.co.in">&nbsp; Reliance Power</option>
-                           <option value="http://www.relianceroads.com">&nbsp; Reliance Roads</option>
-                           <option value="http://www.relianceepc.com">&nbsp; Reliance EPC</option>
-                           <option value="http://www.reliancemumbaimetro.com">&nbsp; Reliance Mumbai Metro</option>
-                           <option value="http://nandedairport.co.in">&nbsp; Nanded Airport</option>
-                           <option value="http://www.bsesdelhi.com">&nbsp; BSES Delhi</option>
-                           <option value="http://www.relianceentertainment.com/">&nbsp; Reliance
+                           <option value="http://www.reliancegroupindia.com">Reliance Group</option>
+                           <option value="http://www.rinfra.com">Reliance Infrastructure</option>
+                           <option value="http://www.reliancepower.co.in">Reliance Power</option>
+                           <option value="http://www.relianceroads.com">Reliance Roads</option>
+                           <option value="http://www.relianceepc.com">Reliance EPC</option>
+                           <option value="http://www.reliancemumbaimetro.com">Reliance Mumbai Metro</option>
+                           <option value="http://nandedairport.co.in">Nanded Airport</option>
+                           <option value="http://www.bsesdelhi.com">BSES Delhi</option>
+                           <option value="http://www.relianceentertainment.com/">Reliance
                               Entertainment
                            </option>
-                           <option value="http://www.kokilabenhospital.com">&nbsp; Kokilaben Hospital</option>
-                           <option value="http://www.daiict.ac.in">&nbsp; DAIICT</option>
+                           <option value="http://www.kokilabenhospital.com">Kokilaben Hospital</option>
+                           <option value="http://www.daiict.ac.in">DAIICT</option>
                         </select>
                      </div>
                   </div>

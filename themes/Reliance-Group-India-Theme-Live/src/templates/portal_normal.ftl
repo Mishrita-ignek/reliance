@@ -50,7 +50,9 @@ h2.portlet-title-text.portlet-title-editable {
 <@liferay_util["include"] page=body_top_include />
 
 <@liferay.control_menu />
-
+<#if has_navigation && is_setup_complete>
+			<#include "${full_templates_path}/desktop_navigation.ftl" />
+		</#if>
 <div  class="menu-container" id="wrapper">
 	<header id="banner" role="banner">
 		<div id="heading">
@@ -61,12 +63,11 @@ h2.portlet-title-text.portlet-title-editable {
 			<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
 		</#if> -->
 
-		<#if has_navigation && is_setup_complete>
-			<#include "${full_templates_path}/desktop_navigation.ftl" />
-		</#if>
+
 		
 	</header>
-
+<div class='abc'>
+</div>
 	
 	<div>
 		<style>
