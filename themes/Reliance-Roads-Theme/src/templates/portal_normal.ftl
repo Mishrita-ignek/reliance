@@ -64,23 +64,7 @@ h2.portlet-title-text.portlet-title-editable {
 		</#if> -->
 
 		<#if has_navigation && is_setup_complete>
-	
-
-  
-
-			<#include "${full_templates_path}/desktop_navigation.ftl" />
-			<!--
-			desktop flt 
-			-->
-				
-            </div>
-			<#include "${full_templates_path}/mobile_navigation.ftl" />
-			
-			 <!--
-			 ftl mobile-->
-			 </div>
-			 </div>
-
+            <#include "${full_templates_path}/desktop_navigation.ftl" />
 		</#if>
 		
 	</header>
