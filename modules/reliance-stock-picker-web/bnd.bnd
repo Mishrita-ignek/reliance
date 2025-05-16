@@ -1,0 +1,12 @@
+Bundle-Name: reliance-stock-picker-web
+Bundle-SymbolicName: com.reliance.stock.picker
+Bundle-Version: 1.0.0
+Export-Package: com.reliance.stock.picker.constants
+Import-Package: \
+    !android.*, \
+    !javax.annotation.meta, \
+    !org.conscrypt, \
+    com.liferay.portal.kernel.json;version="[1.0,8.0)", \
+    com.liferay.portal.kernel.portlet;version="[2.0.0,8.0)", \
+com.liferay.portal.kernel.util;version="[2.0,8.0)", \
+    *
