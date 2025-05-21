@@ -14,6 +14,19 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
 <%
     PortletPreferences preferences = renderRequest.getPreferences();
-    String symbol = preferences.getValue("symbol", "");
-     String name = preferences.getValue("name", "");
+    String stockSymbol = preferences.getValue("symbol", "");
+    String stockName = preferences.getValue("name", "");
+    String stockPrice = (String) request.getAttribute("stockPrice");
+    String stockChange = (String) request.getAttribute("change");
+    String stockPercentChange = (String) request.getAttribute("percentChange");
+    String stockDirection = (String)request.getAttribute("direction");
+
+    double changeValue = 0.0;
+    try {
+        changeValue = Double.parseDouble(stockChange);
+    } catch (NumberFormatException e) {
+    }
+
+    String color = "neutral".equals(stockDirection) ? "black" : ("up".equals(stockDirection) ? "#18cccc" : "red");
+    String stockChangeIcon = "up".equals(stockDirection) ? "+" : ("down".equals(stockDirection) ? "-" : "");
 %>
