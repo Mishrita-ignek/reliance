@@ -16,17 +16,33 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
     PortletPreferences preferences = renderRequest.getPreferences();
     String stockSymbol = preferences.getValue("symbol", "");
     String stockName = preferences.getValue("name", "");
+
     String stockPrice = (String) request.getAttribute("stockPrice");
     String stockChange = (String) request.getAttribute("change");
     String stockPercentChange = (String) request.getAttribute("percentChange");
-    String stockDirection = (String)request.getAttribute("direction");
+    String stockDirection = (String) request.getAttribute("direction");
 
     double changeValue = 0.0;
-    try {
-        changeValue = Double.parseDouble(stockChange);
-    } catch (NumberFormatException e) {
+
+    if (Validator.isNotNull(stockChange)) {
+        try {
+            changeValue = Double.parseDouble(stockChange);
+        } catch (NumberFormatException e) {
+        }
     }
 
-    String color = "neutral".equals(stockDirection) ? "black" : ("up".equals(stockDirection) ? "#18cccc" : "red");
-    String stockChangeIcon = "up".equals(stockDirection) ? "+" : ("down".equals(stockDirection) ? "-" : "");
+    String color = "black";
+    String stockChangeIcon = "";
+
+    if (Validator.isNotNull(stockDirection)) {
+        if ("up".equalsIgnoreCase(stockDirection)) {
+            color = "#18cccc";
+            stockChangeIcon = "+";
+        } else if ("down".equalsIgnoreCase(stockDirection)) {
+            color = "red";
+            stockChangeIcon = "-";
+        } else if ("neutral".equalsIgnoreCase(stockDirection)) {
+            color = "black";
+        }
+    }
 %>

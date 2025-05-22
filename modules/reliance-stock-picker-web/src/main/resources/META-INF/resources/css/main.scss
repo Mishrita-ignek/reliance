@@ -67,3 +67,9 @@
     height: 15px;
     width: 15px;
 }
+
+@media (max-width: 767px) {
+    .stock-details-section {
+        padding: 0 7px !important;
+    }
+}

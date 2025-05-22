@@ -49,39 +49,42 @@ public class RelianceStockPickerWebPortlet extends MVCPortlet {
 		PortletPreferences preferences = renderRequest.getPreferences();
 		String symbol = preferences.getValue("symbol", "");
 		String keyPrefix = symbol + "_";
-		String currentPrice = SimpleCache.get(keyPrefix+"currentStockPrice");
+		String cacheCurrentPrice = SimpleCache.get(keyPrefix+"currentStockPrice");
+		String cacheChange = SimpleCache.get(keyPrefix+"change");
+		String cachePercentChange = SimpleCache.get(keyPrefix+"percentChange");
+		String cacheDirection = SimpleCache.get(keyPrefix+"direction");
 
-		_log.info("currentPrice: "+currentPrice);
+		_log.info("CurrentPrice from cache: "+cacheCurrentPrice);
 
-		if (Validator.isNotNull(currentPrice)) {
-			String change = SimpleCache.get(keyPrefix+"change");
-			String percent_change = SimpleCache.get(keyPrefix+"percentChange");
-			String direction = SimpleCache.get(keyPrefix+"direction");
-
-			_log.info("Using cached currentPrice: " + currentPrice);
-
-			renderRequest.setAttribute("stockPrice", currentPrice);
-			renderRequest.setAttribute("change", change);
-			renderRequest.setAttribute("percentChange", percent_change);
-			renderRequest.setAttribute("direction", direction);
-
+		if (Validator.isNotNull(cacheCurrentPrice) && Validator.isNotNull(cacheChange) && Validator.isNotNull(cachePercentChange)
+		&& Validator.isNotNull(cacheDirection)) {
+			_log.info("Using cached currentPrice: " + cacheCurrentPrice);
+			renderRequest.setAttribute("stockPrice", cacheCurrentPrice);
+			renderRequest.setAttribute("change", cacheChange);
+			renderRequest.setAttribute("percentChange", cachePercentChange);
+			renderRequest.setAttribute("direction", cacheDirection);
 		} else {
 			try {
+				_log.info("Fetching Data..");
 				String fetchedPriceDetails = getStockData(symbol);
-
 				if (Validator.isNotNull(fetchedPriceDetails)) {
 
 					JSONObject stockDataJson = JSONFactoryUtil.createJSONObject(fetchedPriceDetails);
 					String price = stockDataJson.getString("price");
 					String price_change = stockDataJson.getString("change");
 					String percentChange = stockDataJson.getString("percent_change");
+					_log.info("price:"+price);
+					_log.info("price_change:"+price_change);
+					_log.info("percentChange:"+percentChange);
 
 					String formattedPrice = String.format("%.2f", Double.parseDouble(price));
 					String formattedPercentChange = String.format("%.2f", Double.parseDouble(percentChange));
 					String formattedChange = String.format("%.2f", Double.parseDouble(price_change));
-
+					_log.info("formattedPrice:"+formattedPrice);
+					_log.info("formattedPercentChange:"+formattedPercentChange);
+					_log.info("formattedChange:"+formattedChange);
 					String direction = StockFormatterUtil.detectDirection(price_change);
-
+					_log.info("direction:"+direction);
 					renderRequest.setAttribute("stockPrice", formattedPrice);
 					renderRequest.setAttribute("change", formattedChange);
 					renderRequest.setAttribute("percentChange", formattedPercentChange);
@@ -127,17 +130,24 @@ public class RelianceStockPickerWebPortlet extends MVCPortlet {
 			JSONObject priceJson = JSONFactoryUtil.createJSONObject(response.body().string());
 			currentPriceStr = priceJson.getString("price");
 		}
-
 		String quoteUrl = "https://api.twelvedata.com/quote?symbol=" + symbol + "&apikey=318c9270521c4ccbb3ed66311748b6c4";
 		Request quoteRequest = new Request.Builder().url(quoteUrl).get().build();
 
 		String previousCloseStr;
+		boolean isMarketClosed;
 		try (Response response = client.newCall(quoteRequest).execute()) {
 			if (!response.isSuccessful() || response.body() == null) {
 				throw new IOException("Failed to fetch quote: " + response.code());
 			}
 			JSONObject quoteJson = JSONFactoryUtil.createJSONObject(response.body().string());
-			previousCloseStr = quoteJson.getString("close");
+
+			isMarketClosed = quoteJson.getBoolean("is_market_open");
+
+			if(isMarketClosed) {
+				previousCloseStr = quoteJson.getString("close");
+			} else {
+				previousCloseStr = quoteJson.getString("previous_close");
+			}
 
 			double currentPrice = Double.parseDouble(currentPriceStr);
 			double previousClose = Double.parseDouble(previousCloseStr);
