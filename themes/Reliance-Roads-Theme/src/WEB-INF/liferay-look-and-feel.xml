@@ -8,7 +8,7 @@
 	<theme id="reliance-roads-theme" name="Reliance-Roads-Theme">
 		<template-extension>ftl</template-extension>
 		<settings>
-			<setting configurable="true" key="footer-article-id1" value="0"/>
+			<setting configurable="true" key="footer-article-id" value="0"/>
 		</settings>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>

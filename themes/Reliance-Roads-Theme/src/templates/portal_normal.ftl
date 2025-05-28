@@ -6,7 +6,15 @@
 
 <head>
 	<title>Reliance Roads</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5LEY1FRBR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-C5LEY1FRBR');
+    </script>
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 
@@ -51,7 +59,9 @@ h2.portlet-title-text.portlet-title-editable {
 <@liferay_util["include"] page=body_top_include />
 
 <@liferay.control_menu />
-
+<#if has_navigation && is_setup_complete>
+            <#include "${full_templates_path}/desktop_navigation.ftl" />
+		</#if>
 <div  class="menu-container" id="wrapper">
 
 	<header id="banner" role="banner">
@@ -63,9 +73,7 @@ h2.portlet-title-text.portlet-title-editable {
 			<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
 		</#if> -->
 
-		<#if has_navigation && is_setup_complete>
-            <#include "${full_templates_path}/desktop_navigation.ftl" />
-		</#if>
+
 		
 	</header>
 
