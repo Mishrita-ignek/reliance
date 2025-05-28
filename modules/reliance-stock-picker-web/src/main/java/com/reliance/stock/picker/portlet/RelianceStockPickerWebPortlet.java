@@ -13,6 +13,7 @@ import com.reliance.stock.picker.constants.RelianceStockPickerWebPortletKeys;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import javax.portlet.*;
 import com.reliance.stock.picker.preferences.RelianceStockPickerConfiguration;
+import com.reliance.stock.picker.util.StockFormatterUtil;
 import okhttp3.*;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -48,59 +49,53 @@ public class RelianceStockPickerWebPortlet extends MVCPortlet {
 		PortletPreferences preferences = renderRequest.getPreferences();
 		String symbol = preferences.getValue("symbol", "");
 		String keyPrefix = symbol + "_";
+		String cacheCurrentPrice = SimpleCache.get(keyPrefix+"currentStockPrice");
+		String cacheChange = SimpleCache.get(keyPrefix+"change");
+		String cachePercentChange = SimpleCache.get(keyPrefix+"percentChange");
+		String cacheDirection = SimpleCache.get(keyPrefix+"direction");
 
-		_log.info("keyPrefix:"+keyPrefix);
+		_log.info("CurrentPrice from cache: "+cacheCurrentPrice);
 
-		String currentPrice = SimpleCache.get(keyPrefix+"currentStockPrice");
-		String previousPrice = SimpleCache.get(keyPrefix+"previousStockPrice");
-		String lastPriceDiff = SimpleCache.get(keyPrefix + "lastPriceDiff");
-
-		_log.info("currentPrice: "+currentPrice);
-		_log.info("previousPrice: "+previousPrice);
-
-		if (Validator.isNotNull(currentPrice)) {
-			_log.info("Using cached currentPrice: " + currentPrice);
-
-			String priceDiffToUse = "same";
-
-			if ("same".equals(getPriceDiff(previousPrice, currentPrice))) {
-				if (Validator.isNotNull(lastPriceDiff)) {
-					priceDiffToUse = lastPriceDiff;
-				}
-			} else {
-				priceDiffToUse = getPriceDiff(previousPrice, currentPrice);
-			}
-
-			renderRequest.setAttribute("stockPrice", currentPrice);
-			renderRequest.setAttribute("priceDiff", priceDiffToUse);
-			_log.info("priceDiff"+ priceDiffToUse);
-
-
+		if (Validator.isNotNull(cacheCurrentPrice) && Validator.isNotNull(cacheChange) && Validator.isNotNull(cachePercentChange)
+		&& Validator.isNotNull(cacheDirection)) {
+			_log.info("Using cached currentPrice: " + cacheCurrentPrice);
+			renderRequest.setAttribute("stockPrice", cacheCurrentPrice);
+			renderRequest.setAttribute("change", cacheChange);
+			renderRequest.setAttribute("percentChange", cachePercentChange);
+			renderRequest.setAttribute("direction", cacheDirection);
 		} else {
 			try {
-				String fetchedPrice = getStockData(symbol);
-				if (Validator.isNotNull(fetchedPrice)) {
-					_log.info("Fetched new stock price: " + fetchedPrice);
+				_log.info("Fetching Data..");
+				String fetchedPriceDetails = getStockData(symbol);
+				if (Validator.isNotNull(fetchedPriceDetails)) {
 
-					String priceDiffCalculated = getPriceDiff(previousPrice, fetchedPrice);
-					String priceDiffToUse = priceDiffCalculated;
+					JSONObject stockDataJson = JSONFactoryUtil.createJSONObject(fetchedPriceDetails);
+					String price = stockDataJson.getString("price");
+					String price_change = stockDataJson.getString("change");
+					String percentChange = stockDataJson.getString("percent_change");
+					_log.info("price:"+price);
+					_log.info("price_change:"+price_change);
+					_log.info("percentChange:"+percentChange);
 
-					if ("same".equals(priceDiffCalculated) && Validator.isNotNull(lastPriceDiff)) {
-						priceDiffToUse = lastPriceDiff; // keep old color
-					}
-
-					renderRequest.setAttribute("stockPrice", fetchedPrice);
-						renderRequest.setAttribute("priceDiff", priceDiffToUse);
-					_log.info("priceDiff"+ priceDiffToUse);
+					String formattedPrice = String.format("%.2f", Double.parseDouble(price));
+					String formattedPercentChange = String.format("%.2f", Double.parseDouble(percentChange));
+					String formattedChange = String.format("%.2f", Double.parseDouble(price_change));
+					_log.info("formattedPrice:"+formattedPrice);
+					_log.info("formattedPercentChange:"+formattedPercentChange);
+					_log.info("formattedChange:"+formattedChange);
+					String direction = StockFormatterUtil.detectDirection(price_change);
+					_log.info("direction:"+direction);
+					renderRequest.setAttribute("stockPrice", formattedPrice);
+					renderRequest.setAttribute("change", formattedChange);
+					renderRequest.setAttribute("percentChange", formattedPercentChange);
+					renderRequest.setAttribute("direction", direction);
 
 					// Update caches
-					SimpleCache.put(keyPrefix + "currentStockPrice", fetchedPrice, 60 * 1000); // 1 min
-					if (!fetchedPrice.equals(previousPrice)) {
-						SimpleCache.put(keyPrefix + "previousStockPrice", fetchedPrice, Long.MAX_VALUE); // never expire
-					}
+					SimpleCache.put(keyPrefix + "currentStockPrice", formattedPrice, 60 * 1000);
+					SimpleCache.put(keyPrefix + "change", formattedChange, 60 * 1000);
+					SimpleCache.put(keyPrefix + "percentChange", formattedPercentChange, 60 * 1000); // 1 min
+					SimpleCache.put(keyPrefix + "direction", direction, 60 * 1000); // 1 min
 
-					// Cache last priceDiff for next time
-					SimpleCache.put(keyPrefix + "lastPriceDiff", priceDiffToUse, Long.MAX_VALUE);
 				}
 			} catch (Exception e) {
 				_log.error("Unable to fetch stock data", e);
@@ -109,22 +104,6 @@ public class RelianceStockPickerWebPortlet extends MVCPortlet {
 
 		super.render(renderRequest, renderResponse);
 	}
-
-	private String getPriceDiff(String oldPrice, String newPrice) {
-		try {
-			if (Validator.isNotNull(oldPrice) && Validator.isNotNull(newPrice)) {
-				double oldVal = Double.parseDouble(oldPrice);
-				double newVal = Double.parseDouble(newPrice);
-
-				if (newVal > oldVal) return "up";
-				if (newVal < oldVal) return "down";
-			}
-		} catch (NumberFormatException e) {
-			_log.warn("Invalid price comparison", e);
-		}
-		return "same";
-	}
-
 
 	@Activate
 	@Modified
@@ -138,34 +117,54 @@ public class RelianceStockPickerWebPortlet extends MVCPortlet {
 		}
 
 		OkHttpClient client = new OkHttpClient();
-		String url = "https://api.twelvedata.com/price?symbol=" + symbol + "&apikey=318c9270521c4ccbb3ed66311748b6c4";
-		Request request = new Request.Builder()
-				.url(url)
+		String priceUrl = "https://api.twelvedata.com/price?symbol=" + symbol + "&apikey=318c9270521c4ccbb3ed66311748b6c4";
+		Request priceRequest = new Request.Builder()
+				.url(priceUrl)
 				.get()
 				.build();
+		String currentPriceStr;
+		try (Response response = client.newCall(priceRequest).execute()) {
+			if (!response.isSuccessful() || response.body() == null) {
+				throw new IOException("Failed to fetch price: " + response.code());
+			}
+			JSONObject priceJson = JSONFactoryUtil.createJSONObject(response.body().string());
+			currentPriceStr = priceJson.getString("price");
+		}
+		String quoteUrl = "https://api.twelvedata.com/quote?symbol=" + symbol + "&apikey=318c9270521c4ccbb3ed66311748b6c4";
+		Request quoteRequest = new Request.Builder().url(quoteUrl).get().build();
 
-		try (Response response = client.newCall(request).execute()) {
-			String responseString = response.body() != null ? response.body().string() : StringPool.BLANK;
+		String previousCloseStr;
+		boolean isMarketClosed;
+		try (Response response = client.newCall(quoteRequest).execute()) {
+			if (!response.isSuccessful() || response.body() == null) {
+				throw new IOException("Failed to fetch quote: " + response.code());
+			}
+			JSONObject quoteJson = JSONFactoryUtil.createJSONObject(response.body().string());
 
-			if (!response.isSuccessful()) {
-				throw new IOException("Unexpected response: " + response.code() + " - " + responseString);
+			isMarketClosed = quoteJson.getBoolean("is_market_open");
+
+			if(isMarketClosed) {
+				previousCloseStr = quoteJson.getString("close");
+			} else {
+				previousCloseStr = quoteJson.getString("previous_close");
 			}
 
-			JSONObject jsonObject = JSONFactoryUtil.createJSONObject(responseString);
-			String price = jsonObject.getString("price");
+			double currentPrice = Double.parseDouble(currentPriceStr);
+			double previousClose = Double.parseDouble(previousCloseStr);
+			double change = currentPrice - previousClose;
+			double percentChange = (change / previousClose) * 100;
 
+			JSONObject result = JSONFactoryUtil.createJSONObject();
+			result.put("price", currentPriceStr);
+			result.put("change", String.format("%.2f", change));
+			result.put("percent_change", String.format("%.2f", percentChange));
 
-				_log.info("Fetched stock price: " + price);
-
-
-			return price;
+			return result.toString();
 		} catch (IOException | JSONException e) {
 			_log.error("Error fetching stock data", e);
 			throw e;
 		}
 	}
-
-
 
 	private volatile RelianceStockPickerConfiguration relianceStockPickerConfiguration;
 	private static final Log _log = LogFactoryUtil.getLog(RelianceStockPickerWebPortlet.class);

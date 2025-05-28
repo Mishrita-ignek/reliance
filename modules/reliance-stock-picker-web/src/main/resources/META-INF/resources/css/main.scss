@@ -19,10 +19,17 @@
 
 .stock-graph {
   width: 100%;
-  background-image: url('/documents/8354046/15320267/Chart-Container.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.stock-graph.up {
+    background-image: url('/documents/8354046/15320267/chart_container_up.png');
+}
+
+.stock-graph.down {
+    background-image: url('/documents/8354046/15320267/chart_container_down.png');
 }
 
 .stock-card h3 {
@@ -42,19 +49,27 @@
 }
 
 .stock-change {
+  font-family: 'Inter';
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 15px;
 }
 
 .stock-change i {
   margin-right: 5px;
 }
 
-.stock-change.positive {
-  color: #18cccc;
-}
-
 .portlet-title-text {
     display: none !important;
+}
+
+.stock-change-percentage svg {
+    height: 15px;
+    width: 15px;
+}
+
+@media (max-width: 767px) {
+    .stock-details-section {
+        padding: 0 7px !important;
+    }
 }
