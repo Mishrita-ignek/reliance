@@ -8,7 +8,16 @@
 	<title>Reliance Power</title>
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z5421E2SE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7Z5421E2SE');
+    </script>
 
 	<@liferay_util["include"] page=top_head_include />
 	<script>
@@ -52,6 +61,10 @@ display: none !important;
 
 <@liferay.control_menu />
 
+<#if has_navigation && is_setup_complete>
+			<#include "${full_templates_path}/desktop_navigation.ftl" />
+		</#if>
+
 <div  class="menu-container" id="wrapper">
 
 	<header id="banner" role="banner">
@@ -63,25 +76,7 @@ display: none !important;
 			<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
 		</#if> -->
 
-		<#if has_navigation && is_setup_complete>
-	
 
-  
-
-			<#include "${full_templates_path}/desktop_navigation.ftl" />
-			<!--
-			desktop flt 
-			-->
-				
-            </div>
-			<#include "${full_templates_path}/mobile_navigation.ftl" />
-			
-			 <!--
-			 ftl mobile-->
-			 </div>
-			 </div>
-
-		</#if>
 		
 	</header>
 
