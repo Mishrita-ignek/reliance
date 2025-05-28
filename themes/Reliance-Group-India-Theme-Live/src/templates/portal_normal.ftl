@@ -6,6 +6,14 @@
 
 <head>
 	<title>${the_title}</title>
+	<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJVTKRSLDR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WJVTKRSLDR');
+    </script>
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
 

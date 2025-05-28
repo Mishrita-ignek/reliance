@@ -54,7 +54,7 @@
                                     <a href="#">Group Philosophy</a>
                                     <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon"
                                        style="width:15px; height:15px; vertical-align:middle; margin-right:8px;
-                                       position: absolute;top: 10px;right: 0;">
+                                       position: absolute;top: 14px;right: 0;">
                                     <ul class='ig-nested'>
                                        <li><a href="/web/reliance-group-india/vision">Vision</a></li>
                                        <li><a href="/web/reliance-group-india/values">Values</a></li>
@@ -65,7 +65,7 @@
                                     <a href="#">Our Founder</a>
                                     <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon"
                                        style="width:15px; height:15px; vertical-align:middle; margin-right:8px;
-                                       position: absolute;top: 10px;right: 0;">
+                                       position: absolute;top: 14px;right: 0;">
                                     <ul class='ig-nested'>
                                        <li><a href="/web/reliance-group-india/about-shri-dhirubhai-ambani">About
                                           Shri Dhirubhai Ambani</a>
@@ -81,7 +81,7 @@
                                     <a href="#">Our Chairman</a>
                                     <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon"
                                       style="width:15px; height:15px; vertical-align:middle; margin-right:8px;
-                                      position: absolute;top: 10px;right: 0;">
+                                      position: absolute;top: 14px;right: 0;">
                                     <ul class='ig-nested'>
                                        <li><a
                                           href="/web/reliance-group-india/chairmans-message">Chairman's
@@ -160,28 +160,28 @@
                   </nav>
                </div>
                <!-- Group Websites Dropdown -->
-               <div class="ig-fright">
-                  <div class="ig-top_l2">
-                     <div class="ig-footer_grpbox ig-group_width">
-                        <select name="select" class="ig-custom-select" id="groupSelect"
-                           onchange="if (this.value) window.open(this.value, '_blank')">
-                           <option value="" disabled selected hidden>Group Websites</option>
-                           <option value="http://www.reliancegroupindia.com">Reliance Group</option>
-                           <option value="http://www.rinfra.com">Reliance Infrastructure</option>
-                           <option value="http://www.reliancepower.co.in">Reliance Power</option>
-                           <option value="http://www.relianceroads.com">Reliance Roads</option>
-                           <option value="http://www.relianceepc.com">Reliance EPC</option>
-                           <option value="http://www.reliancemumbaimetro.com">Reliance Mumbai Metro</option>
-                           <option value="http://nandedairport.co.in">Nanded Airport</option>
-                           <option value="http://www.bsesdelhi.com">BSES Delhi</option>
-                           <option value="http://www.relianceentertainment.com/">Reliance
-                              Entertainment
-                           </option>
-                           <option value="http://www.kokilabenhospital.com">Kokilaben Hospital</option>
-                           <option value="http://www.daiict.ac.in">DAIICT</option>
-                        </select>
-                     </div>
-                  </div>
+               <div class="nav-gw">
+               <div class="ig-nav_subcolmn1">
+                  <ul id="nav">
+                     <li class="ig-top" id="group-websites-dropdown">
+                        <button class='toggle-submenu'>+</button>
+                        <a href="#" class="ig-top_link" id="t06">Group Websites <svg fill="#034EA2" width="20" height="20" viewBox="0 -0.15 13.1 13.1" xmlns="http://www.w3.org/2000/svg"><path d="m1.6 4.775.85-.85L6.55 8l4.1-4.075.85.85-4.95 4.9z"/></svg></a>
+                        <ul class="ig-sub">
+                           <li> <a href="http://www.reliancegroupindia.com">Reliance Group </a></li>
+                           <li> <a href="http://www.rinfra.com">Reliance Infrastructure</a></li>
+                           <li> <a href="http://www.reliancepower.co.in">Reliance Power</a></li>
+                           <li> <a href="http://www.relianceroads.com">Reliance Roads</a></li>
+                           <li> <a href="http://www.relianceepc.com">Reliance EPC</a></li>
+                           <li> <a href="http://www.reliancemumbaimetro.com">Reliance Mumbai Metro</a></li>
+                           <li> <a href="http://nandedairport.co.in">Nanded Airport</a></li>
+                           <li> <a href="http://www.bsesdelhi.com">BSES Delhi</a></li>
+                           <li> <a href="http://www.relianceentertainment.com/">Reliance Entertainment</a></li>
+                           <li> <a href="http://www.kokilabenhospital.com">Kokilaben Hospital</a></li>
+                           <li> <a href="http://www.daiict.ac.in">DAIICT</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
                </div>
             </div>
          </div>
@@ -191,35 +191,64 @@
 </div>
 
 <script>
-         document.addEventListener("DOMContentLoaded", function () {
-           document.addEventListener("click", function (e) {
-             // Hamburger toggle
-             const hamburger = document.getElementById("ig-hamburger");
-             const navWrapper = document.querySelector(".ig-nav-item-wrapper");
+  document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("click", function (e) {
+      // ✅ Hamburger toggle
+      const hamburger = document.getElementById("ig-hamburger");
+      const navWrapper = document.querySelector(".ig-nav-item-wrapper");
 
-             if (e.target.closest("#ig-hamburger")) {
-               if (navWrapper) navWrapper.classList.toggle("active");
-               if (hamburger) hamburger.classList.toggle("open");
-             }
+      if (e.target.closest("#ig-hamburger")) {
+        if (navWrapper) navWrapper.classList.toggle("active");
+        if (hamburger) hamburger.classList.toggle("open");
+      }
 
-             // Submenu toggle
-             if (e.target.classList.contains("toggle-submenu")) {
-               const parentLi = e.target.closest("li");
-               if (parentLi) {
-                 parentLi.classList.toggle("open");
-                 e.target.textContent = parentLi.classList.contains("open") ? "−" : "+";
-               }
-             }
+      // ✅ Submenu toggle
+      if (e.target.classList.contains("toggle-submenu")) {
+        const parentLi = e.target.closest("li");
 
-             // Nested submenu toggle
-             if (e.target.classList.contains("toggle-nested-menu")) {
-               const childLi = e.target.closest("li");
-               if (childLi) {
-                 childLi.classList.toggle("open");
-                 e.target.textContent = childLi.classList.contains("open") ? "−" : "+";
-               }
-             }
-           });
-         });
+        if (parentLi) {
+          parentLi.classList.toggle("open");
+          e.target.textContent = parentLi.classList.contains("open") ? "−" : "+";
 
+          // ✅ Extra logic ONLY for "Group Websites" dropdown on mobile
+          if (
+            parentLi.id === "group-websites-dropdown" &&
+            window.innerWidth <= 768
+          ) {
+            const dropdown = parentLi.querySelector(".ig-sub");
+
+            if (dropdown) {
+              // Remove previous direction classes
+              dropdown.classList.remove("drop-up", "drop-down");
+
+              // Wait for dropdown to be visible
+              setTimeout(() => {
+                const rect = dropdown.getBoundingClientRect();
+                const spaceBelow = window.innerHeight - rect.bottom;
+                const spaceAbove = rect.top;
+                const dropdownHeight = dropdown.offsetHeight || 200;
+
+                if (spaceBelow < dropdownHeight && spaceAbove > dropdownHeight) {
+                  dropdown.classList.add("drop-up");
+                } else {
+                  dropdown.classList.add("drop-down");
+                }
+              }, 50); // Delay slightly to allow DOM update
+            }
+          }
+        }
+      }
+
+      // ✅ Nested submenu toggle
+      if (e.target.classList.contains("toggle-nested-menu")) {
+        const childLi = e.target.closest("li");
+        if (childLi) {
+          childLi.classList.toggle("open");
+          e.target.textContent = childLi.classList.contains("open") ? "−" : "+";
+        }
+      }
+    });
+  });
 </script>
+
+
