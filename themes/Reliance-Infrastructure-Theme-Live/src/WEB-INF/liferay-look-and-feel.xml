@@ -7,6 +7,9 @@
 	</compatibility>
 	<theme id="RInfra-Theme-Live" name="Reliance-Infrastructure-Theme-Live">
 		<template-extension>ftl</template-extension>
+		<settings>
+			<setting configurable="true" key="footer-article-id" value="0"/>
+		</settings>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
 		</portlet-decorator>
