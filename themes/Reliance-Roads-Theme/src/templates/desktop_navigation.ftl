@@ -39,7 +39,6 @@
                                   <li><a href="/web/reliance-roads/overview">Overview</a></li>
                                   <li><a href="/web/reliance-roads/reliance-group-profile">Reliance Group Profile</a></li>
                                   <li><a href="/web/reliance-roads/our-vision-mission-and-values">Our Vision Mission and Values</a></li>
-                                  <li><a href="#0">Our Chairman</a></li>
                                   <li><a href="/web/reliance-roads/current-projects">Current Projects</a></li>
                                   <li><a href="/web/reliance-roads/award-and-accolades">Award and Accolades</a></li>
                               </ul>
@@ -104,7 +103,6 @@
                                           <li> <a href="http://www.relianceroads.com">Reliance Roads</a></li>
                                           <li> <a href="http://www.relianceepc.com">Reliance EPC</a></li>
                                           <li> <a href="http://www.reliancemumbaimetro.com">Reliance Mumbai Metro</a></li>
-                                          <li> <a href="http://nandedairport.co.in">Nanded Airport</a></li>
                                           <li> <a href="http://www.bsesdelhi.com">BSES Delhi</a></li>
                                           <li> <a href="http://www.relianceentertainment.com/">Reliance Entertainment</a></li>
                                           <li> <a href="http://www.kokilabenhospital.com">Kokilaben Hospital</a></li>

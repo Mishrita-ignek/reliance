@@ -98,7 +98,7 @@
 
 @media (min-width: 1200px) {
   .ig-custom-container {
-    padding: 0 60px;
+    padding: 0 70px;
   }
 }
 
@@ -401,9 +401,7 @@
   }
 
   @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .ig-logo-hamburger-wrapper {
-      margin-top: 20px;
-    }
+    
 
     .desktop_navigation {
       display: block !important;
