@@ -1,130 +1,152 @@
-<div class="desktop_navigation" id="header"> 
+<div class="desktop_navigation" id="header">
+<header class="ig-menu-container ig-custom-container" id="wrapper ig-wrapper">
+   <nav id="navbar">
+      <div class="ig-desktop_navigation" id="header">
+         <div class="ig-header">
+            <!-- Left Logo -->
+            <div class="ig-logo-hamburger-wrapper">
+               <div class="ig-fleft ig-col1">
+                  <div class="ig-Rlogo">
+                     <a href="/web/reliance-epc/index"><img src="${site_logo}" /></a>
+                  </div>
+               </div>
+               <div class="ig-hamburger" id="ig-hamburger">
+                  <!-- Hamburger Icon -->
+                    <svg class="icon icon-hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+                      <rect y="4" width="24" height="2"></rect>
+                      <rect y="11" width="24" height="2"></rect>
+                      <rect y="18" width="24" height="2"></rect>
+                    </svg>
 
-    
-
-<div class="header">
- <div class="fleft col1">
-  <div class="Rlogo fleft"><a href="/web/reliance-epc/index"><img src="${site_logo}" /></a></div>
+                    <!-- Cross Icon -->
+                    <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+                      <line x1="4" y1="4" x2="20" y2="20" stroke="black" stroke-width="2"/>
+                      <line x1="20" y1="4" x2="4" y2="20" stroke="black" stroke-width="2"/>
+                    </svg>
+               </div>
+            </div>
+            <!-- Navigation + Select Box -->
+            <div class="ig-nav-item-wrapper">
+               <!-- Navigation Menu -->
+               <div class="ig-col2a">
+                  <nav class="ig-nav_colmn2">
+                     <div class="ig-nav_subcolmn1">
+                        <ul id="nav">
+                           <li class="ig-top">
+                              <button class='toggle-submenu'>+</button>
+                              <a href="#" class="ig-top_link" id="t02">About Us</a>
+                              <ul class="ig-sub">
+                                 <li><a href="/web/reliance-epc/company-profile">Reliance Group Profile</a></li>
+                                 <li><a href="/web/reliance-epc/reliance-epc">Reliance E&amp;C</a></li>
+                                 <li><a href="/web/reliance-epc/our-vision-mission">Our Vision &amp; Mission</a></li>
+                                 <li><a href="/web/reliance-epc/award-accolades">Award &amp; Accolades</a></li>
+                              </ul>
+                           </li>
+                           <li class="ig-top">
+                              <a href="project-showcase" class="ig-top_link" id="t03">Project Showcase</a>
+                           </li>
+                           <li class="ig-top">
+                              <a href="focus-area" class="ig-top_link" id="t04">Focus Area</a>
+                           </li>
+                           <li class="ig-top">
+                              <a href="ongoing-projects" class="ig-top_link" id="t05">Ongoing Projects</a>
+                           </li>
+                           <li class="ig-top">
+                              <a href="contact-us" class="ig-top_link" id="t10">Contact Us</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+               <!-- Group Websites Dropdown -->
+               <div class="nav-gw">
+               <div class="ig-nav_subcolmn1">
+                  <ul id="nav">
+                     <li class="ig-top" id="group-websites-dropdown">
+                        <button class='toggle-submenu'>+</button>
+                        <a href="#" class="ig-top_link" id="t06">Group Websites <svg fill="#034EA2" width="20" height="20" viewBox="0 -0.15 13.1 13.1" xmlns="http://www.w3.org/2000/svg"><path d="m1.6 4.775.85-.85L6.55 8l4.1-4.075.85.85-4.95 4.9z"/></svg></a>
+                        <ul class="ig-sub">
+                           <li> <a href="http://www.reliancegroupindia.com">Reliance Group </a></li>
+                           <li> <a href="http://www.rinfra.com">Reliance Infrastructure</a></li>
+                           <li> <a href="http://www.reliancepower.co.in">Reliance Power</a></li>
+                           <li> <a href="http://www.relianceroads.com">Reliance Roads</a></li>
+                           <li> <a href="http://www.relianceepc.com">Reliance EPC</a></li>
+                           <li> <a href="http://www.reliancemumbaimetro.com">Reliance Mumbai Metro</a></li>
+                           <li> <a href="http://www.bsesdelhi.com">BSES Delhi</a></li>
+                           <li> <a href="http://www.relianceentertainment.com/">Reliance Entertainment</a></li>
+                           <li> <a href="http://www.kokilabenhospital.com">Kokilaben Hospital</a></li>
+                           <li> <a href="http://www.daiict.ac.in">DAIICT</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </nav>
+</header>
 </div>
-<div class="fright ">
 
-  <div class="LogoText ">Engineering & Construction</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("click", function (e) {
+      // ✅ Hamburger toggle
+      const hamburger = document.getElementById("ig-hamburger");
+      const navWrapper = document.querySelector(".ig-nav-item-wrapper");
 
-  <div class="top_l2">
-    
+      if (e.target.closest("#ig-hamburger")) {
+        if (navWrapper) navWrapper.classList.toggle("active");
+        if (hamburger) hamburger.classList.toggle("open");
+      }
 
-	<div class="footer_grpbox group_width">
+      // ✅ Submenu toggle
+      if (e.target.classList.contains("toggle-submenu")) {
+        const parentLi = e.target.closest("li");
 
+        if (parentLi) {
+          parentLi.classList.toggle("open");
+          e.target.textContent = parentLi.classList.contains("open") ? "−" : "+";
 
-<select class="group_select" name="select" size="1" style="font-family:Arial; font-size:11px; color:#666; width:215px; padding:0; margin:-8px 0; #margin:-15px 0px 0px -10px !important;" onChange="if(options[selectedIndex].value)window.open(options[selectedIndex].value,'_blank')">
+          // ✅ Extra logic ONLY for "Group Websites" dropdown on mobile
+          if (
+            parentLi.id === "group-websites-dropdown" &&
+            window.innerWidth <= 768
+          ) {
+            const dropdown = parentLi.querySelector(".ig-sub");
 
-    <option>&nbsp;  Group Websites</option>
-    <option disabled>-----------------------------------------</option>
-	
-    <option value="http://www.reliancegroupindia.com">&nbsp;  Reliance Group</option>
-    
-    <!--<option disabled>-----------------------------------------</option>
-  
-    <option value="http://www.rcom.co.in">&nbsp;  Reliance Communications</option>
-    <option value="http://www.reliancedigitaltv.com">&nbsp;  Reliance Digital TV</option>
-	<option value="http://www.globalcloudexchange.com/">&nbsp;  Global Cloud Xchange</option>
-    <option value="https://www.relianceglobalcall.com">&nbsp;  Reliance Globalcall</option>
+            if (dropdown) {
+              // Remove previous direction classes
+              dropdown.classList.remove("drop-up", "drop-down");
 
-    
-    <option disabled>-----------------------------------------</option>
-    
-    <option value="http://www.reliancecapital.co.in">&nbsp;  Reliance Capital</option>
-    <option value="http://www.rarcl.com">&nbsp;  RARCL</option>
-    <option value="http://www.rsec.co.in">&nbsp;  Reliance Securities</option>
-    <option value="http://reliancepms.com/">&nbsp;  Reliance PMS</option>
-    <option value="http://www.reliancegeneral.co.in">&nbsp;  Reliance General Insurance</option>
-    <option value="http://www.reliancelife.com">&nbsp;  Reliance Life Insurance</option>
-    <option value="http://www.reliancecommercialfinance.com">&nbsp;  Reliance Commercial Finance</option>
-    <option value="http://www.reliancemutual.com">&nbsp;  Reliance Mutual Fund</option>
-    
-    <option disabled>-----------------------------------------</option>-->
-    
-    <option value="http://www.rinfra.com">&nbsp;  Reliance Infrastructure</option>
-    <!--<option value="http://www.rnaval.co.in">&nbsp;  Reliance Naval & Engineering Limited</option>-->
-    <option value="http://www.reliancepower.co.in">&nbsp;  Reliance Power</option>
-    <option value="http://www.relianceroads.com">&nbsp;  Reliance Roads</option>
-    <!--<option value="http://www.relianceenergytrading.com">&nbsp;  Reliance Energy Trading</option>-->
-    <option value="http://www.reliancemumbaimetro.com">&nbsp;  Reliance Mumbai Metro</option>
-    <option value="http://nandedairport.co.in">&nbsp;  Nanded Airport</option>
-    <option value="http://www.bsesdelhi.com">&nbsp;  BSES Delhi</option>
+              // Wait for dropdown to be visible
+              setTimeout(() => {
+                const rect = dropdown.getBoundingClientRect();
+                const spaceBelow = window.innerHeight - rect.bottom;
+                const spaceAbove = rect.top;
+                const dropdownHeight = dropdown.offsetHeight || 200;
 
-    <!--<option disabled>-----------------------------------------</option>
-    
-    <option value="http://www.relianceentertainment.net">&nbsp;  Reliance Entertainment</option>
-    <option value="http://www.rbe.co.in">&nbsp;  Reliance Big Entertainment</option>
-    <option value="http://www.reliancebroadcast.com">&nbsp;  Reliance Broadcast Network</option>
-    <option value="http://reliancehvg.co.in/store/home.php">&nbsp;  Reliance Home Video & Games</option>
-    <option value="http://www.biganimation.com">&nbsp;  Reliance Animation</option>
-    <option value="http://www.ndstudioindia.com">&nbsp;  Reliance ND Studio</option>
-    <option value="http://www.bigsynergy.tv">&nbsp;  Reliance Synergy</option>
-    <option value="http://www.big927fm.com">&nbsp;  BIG 92.7 FM</option>
-    <option value="http://www.bigadda.com">&nbsp;  BIG ADDA</option>
-    <option value="http://www.bigflix.com">&nbsp;  BIG Flix</option>
-    <option value="http://www.talenthouse.com">&nbsp;  Talent House</option>
-    <option value="http://www.reliancegames.com">&nbsp;  Reliance Games</option>
-    <option value="http://www.zapak.com">&nbsp;  Zapak</option>
-    
-    <option disabled>-----------------------------------------</option>
-    
-    <option value="http://www.kokilabenhospital.com">&nbsp;  Kokilaben Hospital</option>
-    <option value="http://www.kdanursingcollege.com">&nbsp;  KDA Nursing College</option>
-    <option value="http://www.harmonyindia.org">&nbsp;  Harmony</option>
-    <option value="http://www.daiict.ac.in">&nbsp;  DAIICT</option>-->
-    </select>
-	
-	</div>
- </div>
-</div>
-</div>
+                if (spaceBelow < dropdownHeight && spaceAbove > dropdownHeight) {
+                  dropdown.classList.add("drop-up");
+                } else {
+                  dropdown.classList.add("drop-down");
+                }
+              }, 50); // Delay slightly to allow DOM update
+            }
+          }
+        }
+      }
+
+      // ✅ Nested submenu toggle
+      if (e.target.classList.contains("toggle-nested-menu")) {
+        const childLi = e.target.closest("li");
+        if (childLi) {
+          childLi.classList.toggle("open");
+          e.target.textContent = childLi.classList.contains("open") ? "−" : "+";
+        }
+      }
+    });
+  });
+</script>
 
 
-
-
-
-<div class="col2a">
-  <div class="nav_colmn2">
-    <div class="nav_subcolmn1">
-     <ul id="nav">
-      
-	  <!--Home -->
-      <li class="top"><a href="/web/reliance-epc/index" class="top_link" id="t01">Home</a></li>
-      
-	  <!--About Us -->
-      <li class="top"><a href="#" class="top_link" id="t02">About Us</a>
-        <ul class="sub w180">
-        <li><a href="/web/reliance-epc/company-profile">Reliance Group Profile</a></li>
-        <li><a <a href="#0">Our Chairman</a></li>
-        <!--<li><a href="#">Our Chairman<span class="arrow_nav"></span></a>
-          <ul class="w190"> 
-            <li><a href="/web/reliance-epc/chairman-profile">Chairman's Profile </a></li>
-              <li><a href="/web/reliance-epc/chairman-message">Chairman's Message </a></li>
-          </ul> 
-        </li>-->
-  		  <li><a href="/web/reliance-epc/reliance-epc">Reliance E&C</a></li>
-  		  <li><a href="/web/reliance-epc/our-vision-mission">Our Vision & Mission</a></li>
-  	    <li><a href="/web/reliance-epc/award-accolades">Award & Accolades</a></li>
-        </ul>
-      </li>
-
-	  <!-- Project Showcase-->
-      <li class="top"><a href="project-showcase" class="top_link" id="t03">Project Showcase</a></li> 
-    
-	  <!-- Focus Area -->
-	    <li class="top"><a href="focus-area" class="top_link" id="t04">Focus Area</a></li>
-	
-	  <!-- Ongoing Projects -->
-	    <li class="top"><a href="ongoing-projects" class="top_link" id="t05">Ongoing Projects</a></li>
-
-
-	  <!-- Contact Us -->	
-	    <li class="top"><a href="contact-us" class="top_link" id="t06">Contact Us</a></li>
-    </div>
-
-</div>
-</div>
-</div>

@@ -1,3 +1,3 @@
-<#--
-This file allows you to override and define new FreeMarker variables.
--->
+<#assign
+		footer_article_id = getterUtil.getString(themeDisplay.getThemeSetting("footer-article-id"))
+/>
