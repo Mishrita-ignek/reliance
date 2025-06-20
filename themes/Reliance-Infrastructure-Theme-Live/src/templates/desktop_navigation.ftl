@@ -67,49 +67,12 @@
                                         <li><a href="/web/rinfra/defence">Defence</a></li>
                               </ul>
                            </li>
-                           <li class="ig-top">
-                              <button class='toggle-submenu'>+</button>
-                              <a href="#" class="ig-top_link" id="t03">Business Responsibility Reporting</a>
-                              <ul class="ig-sub">
-                                        <li><button class='toggle-nested-menu'>+</button><a href="#">Our Philosophy</a>
-                                        <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon"
-                                                                               style="width:12px; height:12px; vertical-align:middle; margin-right:8px;
-                                                                               position: absolute;top: 14px;right: 0;">
-                                          <ul class="ig-nested">
-                                          <li><a href="/web/rinfra/governance-philosophy">Governance Philosophy </a></li>
-                                          </ul>
-                                        </li>
-                                        <li><a href="#">Our Performance</a></li>
-                                        <li><a href="/web/rinfra/safety">Safety</a></li>
-                                        <li><a href="/web/rinfra/energy-conservation">Energy Conservation</a></li>
-                                        <li><a href="/web/rinfra/our-policies">Our Policies</a></li>
-                                        <li><a href="/web/rinfra/business-responsibility-report">Business Responsibility Report</a> </li>
-                              </ul>
-                           </li>
+
                            <li class="ig-top">
                               <button class='toggle-submenu'>+</button>
                               <a href="#" class="ig-top_link" id="t04">Investor Relations</a>
                               <ul class="ig-sub">
-                                 <li><button class='toggle-nested-menu'>+</button><a href="#">Investor Communication</a>
-                                    <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon" style="width:12px; height:12px; vertical-align:middle; margin-right:8px; position: absolute;top: 14px;right: 0;">
-                                    <ul class="ig-nested">
-                                        <li><a href="#0">Presentations</a></li>
-                                        <li><a href="/web/rinfra/annual-general-meeting">Annual General Meeting</a></li>
-                                        <li><a href="/web/rinfra/con-call">Con-Call</a></li>
-                                    </ul>
-                                 </li>
-                                 <li><button class='toggle-nested-menu'>+</button><a href="#">Stock Information</a>
-                                    <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon" style="width:12px; height:12px; vertical-align:middle; margin-right:8px; position: absolute;top: 14px;right: 0;">
-                                    <ul class="ig-nested">
-                                        <li><a href="/web/rinfra/dividend-history">Dividend History</a></li>
-                                        <li><a href="/web/rinfra/rinfra-equity-history">Equity History</a></li>
-                                        <li><a href="/web/rinfra/share-trading">Listing Particulars</a></li>
-                                        <li><a href="/web/rinfra/share-price-data">Share Price Data</a></li>
-                                        <li><a href="/web/rinfra/postal-ballot">Postal Ballot</a></li>
-                                        <li><a href="/web/rinfra/court-convened-meeting">Court Convened Meeting</a></li>
-                                        <li><a href="/web/rinfra/issue-of-duplicate-share-certificates">Disclosures regarding Duplicate <br>Share Certificates</a></li>
-                                    </ul>
-                                 </li>
+
                                  <li><button class='toggle-nested-menu'>+</button><a href="#">Disclosures under Reg 46 of LODR</a>
                                     <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon" style="width:12px; height:12px; vertical-align:middle; margin-right:8px; position: absolute;top: 14px;right: 0;">
                                     <ul class="ig-nested">
@@ -155,6 +118,26 @@
                                         </li>
                                     </ul>
                                  </li>
+                                 <li><button class='toggle-nested-menu'>+</button><a href="#">Investor Communication</a>
+                                    <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon" style="width:12px; height:12px; vertical-align:middle; margin-right:8px; position: absolute;top: 14px;right: 0;">
+                                    <ul class="ig-nested">
+                                        <li><a href="#0">Presentations</a></li>
+                                        <li><a href="/web/rinfra/annual-general-meeting">Annual General Meeting</a></li>
+                                        <li><a href="/web/rinfra/con-call">Con-Call</a></li>
+                                    </ul>
+                                 </li>
+                                 <li><button class='toggle-nested-menu'>+</button><a href="#">Stock Information</a>
+                                    <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon" style="width:12px; height:12px; vertical-align:middle; margin-right:8px; position: absolute;top: 14px;right: 0;">
+                                    <ul class="ig-nested">
+                                        <li><a href="/web/rinfra/dividend-history">Dividend History</a></li>
+                                        <li><a href="/web/rinfra/rinfra-equity-history">Equity History</a></li>
+                                        <li><a href="/web/rinfra/share-trading">Listing Particulars</a></li>
+                                        <li><a href="/web/rinfra/share-price-data">Share Price Data</a></li>
+                                        <li><a href="/web/rinfra/postal-ballot">Postal Ballot</a></li>
+                                        <li><a href="/web/rinfra/court-convened-meeting">Court Convened Meeting</a></li>
+                                        <li><a href="/web/rinfra/issue-of-duplicate-share-certificates">Disclosures regarding Duplicate <br>Share Certificates</a></li>
+                                    </ul>
+                                 </li>
                                  <li><a href="/web/rinfra/corporate-social-responsibility">Corporate Social Responsibility</a></li>
                                  <li><button class='toggle-nested-menu'>+</button><a href="#">Shareholder Services</a>
                                     <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon" style="width:12px; height:12px; vertical-align:middle; margin-right:8px; position: absolute;top: 14px;right: 0;">
@@ -172,7 +155,7 @@
                                             </ul>
                                         </li>
                                         <li><button class='toggle-nested-menu'>+</button><a href="#">Transfer of Shares and <br>Dividend to IEPF</a>
-                                            <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon" style="width:12px; height:12px; vertical-align:middle; margin-right:8px; position: absolute;top: 14px;right: 0;">
+                                            <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon" style="width:12px; height:12px; vertical-align:middle; margin-right:8px; position: absolute;top: 25px;right: 0;">
                                             <ul class="ig-nested">
                                                 <li><a href="/web/rinfra/procedure-for-claiming-shares">Procedure</a></li>
                                                 <li><a href="/web/rinfra/iepf-nodal-officer">IEPF - Nodal Officer</a></li>
@@ -189,7 +172,25 @@
                                  </li>
                               </ul>
                            </li>
-
+                           <li class="ig-top">
+                              <button class='toggle-submenu'>+</button>
+                              <a href="#" class="ig-top_link" id="t03">Business Responsibility Reporting</a>
+                              <ul class="ig-sub">
+                                        <li><button class='toggle-nested-menu'>+</button><a href="#">Our Philosophy</a>
+                                        <img src="/o/Reliance-Group-India-Theme/images/navigation/right-arrow.png" alt="Icon"
+                                                                               style="width:12px; height:12px; vertical-align:middle; margin-right:8px;
+                                                                               position: absolute;top: 14px;right: 0;">
+                                          <ul class="ig-nested">
+                                          <li><a href="/web/rinfra/governance-philosophy">Governance Philosophy </a></li>
+                                          </ul>
+                                        </li>
+                                        <li><a href="#">Our Performance</a></li>
+                                        <li><a href="/web/rinfra/safety">Safety</a></li>
+                                        <li><a href="/web/rinfra/energy-conservation">Energy Conservation</a></li>
+                                        <li><a href="/web/rinfra/our-policies">Our Policies</a></li>
+                                        <li><a href="/web/rinfra/business-responsibility-report">Business Responsibility Report</a> </li>
+                              </ul>
+                           </li>
                            <li class="ig-top">
                               <button class='toggle-submenu'>+</button>
                               <a href="#" class="ig-top_link" id="t06">Careers</a>

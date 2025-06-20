@@ -98,7 +98,7 @@
 
 @media (min-width: 1200px) {
   .ig-custom-container {
-    padding: 0 60px;
+    padding: 0 70px;
   }
 }
 
@@ -363,7 +363,7 @@
   }
 
   .menu-container {
-    top: 59px;
+    top: 54px;
   }
 
   #nav li:hover li:hover ul.ig-nested {
@@ -390,7 +390,7 @@
   @media only screen and (max-width: 480px) {
     .desktop_navigation {
       display: block !important;
-      height: 59px;
+      height: 54px;
     }
   }
 
@@ -401,9 +401,7 @@
   }
 
   @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .ig-logo-hamburger-wrapper {
-      margin-top: 20px;
-    }
+    
 
     .desktop_navigation {
       display: block !important;
