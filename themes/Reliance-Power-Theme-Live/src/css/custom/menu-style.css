@@ -55,9 +55,7 @@
 {position:absolute; left:-9999px; top:-9999px; width:0; height:0; margin:0; padding:0; list-style:none; background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, .15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);}
+  border-radius: 4px;}
 
 #tlink #t0  {background:url(../images/AboutBg.jpg) no-repeat right 0px; height:16px;padding:10px 18px; margin:-6px 0 0 0;}
 #tlink01 #t01 , #tlink02 #t02 , #tlink03 #t03 , #tlink04 #t04 , #tlink1 #t1 , #tlink2 #t2 , #tlink3 #t3 , #tlink4 #t4 , #tlink5 #t5 , #tlink6 #t6 , #tlink7 #t7 , #tlink8 #t8 , #tlink9 #t9 , #tlink10 #t10 , #tlink1 #t1 {background:#2b6eb8; height:16px; padding:10px 10px; margin:-6px 0 0 0;}

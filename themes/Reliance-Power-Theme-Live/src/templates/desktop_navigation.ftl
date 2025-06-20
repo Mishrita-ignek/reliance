@@ -7,7 +7,7 @@
             <div class="ig-logo-hamburger-wrapper">
                <div class="ig-fleft ig-col1">
                   <div class="ig-Rlogo">
-                     <a href="/web/reliance-group-india/index"><img src="${site_logo}" /></a>
+                     <a href="/web/reliance-power"><img src="${site_logo}" /></a>
                   </div>
                </div>
                <div class="ig-hamburger" id="ig-hamburger">
@@ -43,19 +43,7 @@
                                  <li><a href="/web/reliance-power/management-overview">Management Team</a></li>
                               </ul>
                            </li>
-                           <li class="ig-top">
-                              <button class='toggle-submenu'>+</button>
-                              <a href="#" class="ig-top_link" id="t03">Business Areas</a>
-                              <ul class="ig-sub">
-                                 <li><a href="/web/reliance-power/projects-overview">Power Projects</a></li>
-                                 <li><a href="/web/reliance-power/coal-based-projects">Coal based Projects</a></li>
-                                 <li><a href="/web/reliance-power/gas-based-projects">Gas based Projects</a></li>
-                                 <li><a href="/web/reliance-power/solar-power-projects">Solar Power Projects</a></li>
-                                 <li><a href="/web/reliance-power/hydroelectricity-projects">Hydroelectricity Projects</a></li>
-                                 <li><a href="/web/reliance-power/initiatives-in-renewable-energy">Initiatives in Renewable Energy</a></li>
-                                 <li><a href="/web/reliance-power/carbon-credits">Carbon Credits</a></li>
-                              </ul>
-                           </li>
+
                            <li class="ig-top">
                               <button class='toggle-submenu'>+</button>
                               <a href="#" class="ig-top_link" id="t04">Investor Information</a>
@@ -74,13 +62,13 @@
                                                 <li><a href="/web/reliance-power/financial-results">Financial Results</a></li>
                                                 <li><a href="/web/reliance-power/annual-report">Annual Report</a></li>
                                                 <li><a href="/web/reliance-power/annual-return">Annual Return</a></li>
-                                                <li><a href="/web/reliance-power/financial-statement-of-subsidiaries">Financial Statement of Subsidiaries</a></li>
+                                                <li><a href="/web/reliance-power/financial-statement-of-subsidiaries">Financial Statement </br>of Subsidiaries</a></li>
                                             </ul>
                                        </li>
                                        <li><a href="/web/reliance-power/corporate-governance">Corporate Governance Policies</a></li>
                                        <li><a href="/web/reliance-power/filing-with-regulatory">Filing with Regulatory</a></li>
                                        <li><a href="/documents/2181716/13395902/Familiarization_Pogramme_for_Independent_Directors.pdf" target="_blank">Familiarization of Board Members</a></li>
-                                       <li><a href="/documents/2181716/13395902/RPower_Composition_of_Committees.pdf" target="_blank">Composition of the Board and its Committees</a></li>
+                                       <li><a href="/documents/2181716/13395902/RPower_Composition_of_Committees.pdf" target="_blank">Composition of the Board and </br>its Committees</a></li>
                                        <li><a href="/documents/2181716/15301552/ESOS_Scheme.pdf" target="_blank">Employee Stock Option Scheme 2024</a></li>
                                        <li><a href="/web/reliance-power/public-notice">Public Notice </a></li>
                                        <li><a href="/web/reliance-power/share-holder-desk">Shareholding Pattern</a></li>
@@ -89,6 +77,7 @@
                                        <li><a href="/web/reliance-power/contact-us">Contact</a></li>
                                     </ul>
                                  </li>
+
                                  <li>
                                     <button class='toggle-nested-menu'>+</button>
                                     <a href="#">Disclosures under Reg 62 of LODR</a>
@@ -107,7 +96,7 @@
                                             </ul>
                                        </li>
                                        <li><a href="/web/reliance-power/filing-with-regulatory">Filing with Regulatory</a></li>
-                                       <li><a href="/documents/2181716/13395902/RPower_Composition_of_Committees.pdf" target="_blank">Composition of the Board and its Committees</a></li>
+                                       <li><a href="/documents/2181716/13395902/RPower_Composition_of_Committees.pdf" target="_blank">Composition of the Board </br>and its Committees</a></li>
                                        <li><a href="/web/reliance-power/share-holder-desk">Shareholding Pattern</a></li>
                                        <li><a href="/web/reliance-power/ratings-assigned-by-credit-rating-agency">Credit Ratings</a></li>
                                        <li><a href="/web/reliance-power/updates-on-non-convertible-debentures">Debenture Trustees</a></li>
@@ -130,6 +119,19 @@
                                  <li><a href="/web/reliance-power/investor-education-and-protection-fund"><span>Investor Education and Protection Fund</span></a></li>
                                  <li><a href="/documents/2181716/2359750/Memorandum_and_Articles_of_Association.pdf" target="_blank"><span>Memorandum and Articles of Association</span></a></li>
                                  <li><a href="/web/reliance-power/scheme-of-amalgamation"><span>Scheme of Amalgamation of RCPPL into RPower</span></a></li>
+                              </ul>
+                           </li>
+                           <li class="ig-top">
+                              <button class='toggle-submenu'>+</button>
+                              <a href="#" class="ig-top_link" id="t03">Business Areas</a>
+                              <ul class="ig-sub">
+                                 <li><a href="/web/reliance-power/projects-overview">Power Projects</a></li>
+                                 <li><a href="/web/reliance-power/coal-based-projects">Coal based Projects</a></li>
+                                 <li><a href="/web/reliance-power/gas-based-projects">Gas based Projects</a></li>
+                                 <li><a href="/web/reliance-power/solar-power-projects">Solar Power Projects</a></li>
+                                 <li><a href="/web/reliance-power/hydroelectricity-projects">Hydroelectricity Projects</a></li>
+                                 <li><a href="/web/reliance-power/initiatives-in-renewable-energy">Initiatives in Renewable Energy</a></li>
+                                 <li><a href="/web/reliance-power/carbon-credits">Carbon Credits</a></li>
                               </ul>
                            </li>
                            <li class="ig-top">
@@ -184,7 +186,6 @@
                            <li> <a href="http://www.relianceroads.com">Reliance Roads</a></li>
                            <li> <a href="http://www.relianceepc.com">Reliance EPC</a></li>
                            <li> <a href="http://www.reliancemumbaimetro.com">Reliance Mumbai Metro</a></li>
-                           <li> <a href="http://nandedairport.co.in">Nanded Airport</a></li>
                            <li> <a href="http://www.bsesdelhi.com">BSES Delhi</a></li>
                            <li> <a href="http://www.relianceentertainment.com/">Reliance Entertainment</a></li>
                            <li> <a href="http://www.kokilabenhospital.com">Kokilaben Hospital</a></li>
